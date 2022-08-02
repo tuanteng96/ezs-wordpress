@@ -71,19 +71,36 @@
 								</ul>
 							</li>
 							<li data-stt="4"><a href="/ver2/khach-hang.html" title="Khách Hàng"><span>05.</span>Khách Hàng</a></li>
-							<li data-stt="5"><a href="#email" title="Blogs"><span>06.</span>Blogs</a>
-								<ul class="header-top__menu-sub">
-									<li><a href="#">Quản lý và vận hành spa</a></li>
-									<li><a href="#">Kinh nghiệm Marketing Spa</a></li>
-									<li><a href="#">Chăm sóc khách hàng</a></li>
-									<li><a href="#">Tăng doanh thu Spa</a></li>
-									<li><a href="#">Nâng cấp chất lượng Spa</a></li>
-									<li><a href="#">Tìm kiếm khách hàng cho Spa</a></li>
-								</ul>
-							</li>
-							<li data-stt="6"><a href="/ver2/gioi-thieu.html" title="Giới thiệu"><span>07.</span>Giới thiệu</a></li>
-							<div class="menu-background-move">
-							</div>
+							<li data-stt="5">
+								<?php
+								$args = array(
+									'type'      => 'post',
+									'child_of'  => 0,
+									'parent'    => '1',
+									'number'    => '1'
+								);
+								$categories = get_categories($args);
+								foreach ($categories as $category) { ?>
+								<a href="<?php echo $category->slug; ?>" title="Blogs"><span>06.</span>Blogs</a>
+						<?php }
+						?>
+						<ul class="header-top__menu-sub">
+							<?php
+							$args = array(
+								'type'      => 'post',
+								'child_of'  => 0,
+								'parent'    => '1'
+							);
+							$categories = get_categories($args);
+							foreach ($categories as $category) { ?>
+								<li><a href="<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></li>
+							<?php }
+							?>
+						</ul>
+						</li>
+						<li data-stt="6"><a href="/ver2/gioi-thieu.html" title="Giới thiệu"><span>07.</span>Giới thiệu</a></li>
+						<div class="menu-background-move">
+						</div>
 						</ul>
 					</div>
 				</div>
