@@ -28,7 +28,9 @@
 
 	<!-- css,js,jq -->
 	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/lib/jq/jquery-3.6.0.js"></script>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css">
+	<script src="<?php echo get_template_directory_uri() ?>/assets/lib/dragui/jquery-ui.js"></script>
+
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?2">
 
 	<?php wp_head(); ?>
 
@@ -39,7 +41,9 @@
 	<header>
 		<div class="header-top">
 			<div class="header-top__logo">
-				<img width="74" height="25" src="<?php echo get_template_directory_uri() ?>/assets/img/logo-trang.png" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image">
+				<a href="/">
+					<img width="74" height="25" src="<?php echo get_template_directory_uri() ?>/assets/img/logo-trang.png" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image">
+				</a>
 			</div>
 			<div class="header-top__menu">
 				<div>
@@ -50,57 +54,66 @@
 							</li>
 							<li data-stt="1"><a href="#app"><span>02.</span>Giải pháp</a>
 								<ul class="header-top__menu-sub">
-									<li><a href="/video-diem-noi-bat.html">Video điểm nổi bật
+									<li><a href="/video-diem-noi-bat">Video điểm nổi bật
 										</a></li>
-									<li><a href="chi-tiet-chuc-nang-phan-mem-quan-li-spa-ezs.html">Chi tiết chức
+									<li><a href="/chi-tiet-chuc-nang">Chi tiết chức
 											năng</a></li>
 
 								</ul>
 							</li>
-							<li data-stt="2"><a href="/bang-gia.html" title="BẢNG GIÁ"><span>03.</span>BẢNG GIÁ</a>
+							<li data-stt="2"><a href="/bang-gia"><span>03.</span>BẢNG GIÁ</a>
 							</li>
-							<li data-stt="3"><a href="#system" title="QUY TRÌNH"><span>04.</span>QUY TRÌNH</a>
+							<li data-stt="3"><a href="#system"><span>04.</span>QUY TRÌNH</a>
 								<ul class="header-top__menu-sub">
-									<li><a href="/quy-trinh.html#tuvan-demo">Tư vấn - demo</a></li>
-									<li><a href="/quy-trinh.html#hopdong-thanhtoan">Ký hợp đồng - Thanh toán</a>
+									<li><a href="/quy-trinh?#tuvan-demo">Tư vấn - demo</a></li>
+									<li><a href="/quy-trinh?#hopdong-thanhtoan">Ký hợp đồng - Thanh toán</a>
 									</li>
-									<li><a href="/quy-trinh.html#bangiao-huongdan">Bàn giao - Hướng dẫn sử dụng</a>
+									<li><a href="/quy-trinh?#bangiao-huongdan">Bàn giao - Hướng dẫn sử dụng</a>
 									</li>
-									<li><a href="/quy-trinh.html#baohanh-hotro">Bảo hành - Hỗ trợ - Nâng cấp</a>
+									<li><a href="/quy-trinh?#baohanh-hotro">Bảo hành - Hỗ trợ - Nâng cấp</a>
 									</li>
 								</ul>
 							</li>
-							<li data-stt="4"><a href="/ver2/khach-hang.html" title="Khách Hàng"><span>05.</span>Khách Hàng</a></li>
+							<li data-stt="4"><a href="/khach-hang"><span>05.</span>Khách Hàng</a></li>
 							<li data-stt="5">
 								<?php
-								$args = array(
-									'type'      => 'post',
-									'child_of'  => 0,
-									'parent'    => '1',
-									'number'    => '1'
+								$value = get_terms(
+									array(
+										'taxonomy'   => 'category',
+										'hide_empty' => false,
+										'parent' => 0,
+										'number' => 1,
+									)
 								);
-								$categories = get_categories($args);
-								foreach ($categories as $category) { ?>
-								<a href="<?php echo $category->slug; ?>" title="Blogs"><span>06.</span>Blogs</a>
-						<?php }
-						?>
-						<ul class="header-top__menu-sub">
-							<?php
-							$args = array(
-								'type'      => 'post',
-								'child_of'  => 0,
-								'parent'    => '1'
-							);
-							$categories = get_categories($args);
-							foreach ($categories as $category) { ?>
-								<li><a href="<?php echo $category->slug; ?>"><?php echo $category->name; ?></a></li>
-							<?php }
-							?>
-						</ul>
-						</li>
-						<li data-stt="6"><a href="/ver2/gioi-thieu.html" title="Giới thiệu"><span>07.</span>Giới thiệu</a></li>
-						<div class="menu-background-move">
-						</div>
+								if (!empty($value) && is_array($value)) {
+									foreach ($value as $key) { ?>
+										<a href="<?php echo esc_url(get_term_link($key)) ?>"><span>06.</span>Blogs</a>
+										<ul class="header-top__menu-sub">
+											<?php
+											$value1 = get_terms(
+												array(
+													'taxonomy'   => 'category',
+													'hide_empty' => false,
+													'parent' => $key->term_id,
+												)
+											);
+											if (!empty($value1) && is_array($value1)) {
+												foreach ($value1 as $key) { ?>
+													<li><a href="<?php echo esc_url(get_term_link($key)) ?>">
+															<?php echo $key->name; ?>
+														</a>
+													</li>
+											<?php
+												}
+											} ?>
+										</ul>
+								<?php
+									}
+								} ?>
+							</li>
+							<!-- <li data-stt="6"><a href="gioi-thieu"><span>07.</span>Giới thiệu</a></li> -->
+							<div class="menu-background-move">
+							</div>
 						</ul>
 					</div>
 				</div>
@@ -116,7 +129,9 @@
 		</div>
 		<div class="header-fixed">
 			<div class="header-fixed__logo">
-				<img width="74" height="25" src="<?php echo get_template_directory_uri() ?>/assets/img/logo-mau.png" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image">
+				<a href="/">
+					<img width="74" height="25" src="<?php echo get_template_directory_uri() ?>/assets/img/logo-mau.png" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image">
+				</a>
 			</div>
 			<div class="header-fixed__menu h-100">
 				<div class="h-100">
@@ -128,37 +143,63 @@
 							</li>
 							<li data-stt="1"><a href="#app" title="Giải pháp"><span>02.</span>Giải pháp</a>
 								<ul class="header-top__menu-sub">
-									<li><a href="/ver2/video-diem-noi-bat.html">Video điểm nổi bật</a></li>
-									<li><a href="chi-tiet-chuc-nang-phan-mem-quan-li-spa-ezs.html">Chi tiết chức
+									<li><a href="/video-diem-noi-bat">Video điểm nổi bật</a></li>
+									<li><a href="/chi-tiet-chuc-nang">Chi tiết chức
 											năng</a></li>
 
 								</ul>
 							</li>
-							<li data-stt="2"><a href="/ver2/bang-gia.html" title="BẢNG GIÁ"><span>03.</span>BẢNG GIÁ</a>
+							<li data-stt="2"><a href="/bang-gia"><span>03.</span>BẢNG GIÁ</a>
 							</li>
-							<li data-stt="3"><a href="#system" title="QUY TRÌNH"><span>04.</span>QUY TRÌNH</a>
+							<li data-stt="3"><a href="#system"><span>04.</span>QUY TRÌNH</a>
 								<ul class="header-top__menu-sub">
-									<li><a href="/ver2/quy-trinh.html#tuvan-demo">Tư vấn - demo</a></li>
-									<li><a href="/ver2/quy-trinh.html#hopdong-thanhtoan">Ký hợp đồng - Thanh toán</a>
+									<li><a href="/quy-trinh?#tuvan-demo">Tư vấn - demo</a></li>
+									<li><a href="/quy-trinh?#hopdong-thanhtoan">Ký hợp đồng - Thanh toán</a>
 									</li>
-									<li><a href="/ver2/quy-trinh.html#bangiao-huongdan">Bàn giao - Hướng dẫn sử dụng</a>
+									<li><a href="/quy-trinh?#bangiao-huongdan">Bàn giao - Hướng dẫn sử dụng</a>
 									</li>
-									<li><a href="/ver2/quy-trinh.html#baohanh-hotro">Bảo hành - Hỗ trợ - Nâng cấp</a>
+									<li><a href="/quy-trinh?#baohanh-hotro">Bảo hành - Hỗ trợ - Nâng cấp</a>
 									</li>
 								</ul>
 							</li>
-							<li data-stt="4"><a href="/ver2/khach-hang.html" title="Khách Hàng"><span>05.</span>Khách Hàng</a>
-							<li data-stt="5"><a href="#email" title="Blogs"><span>06.</span>Blogs</a>
-								<ul class="header-top__menu-sub">
-									<li><a href="#">Quản lý và vận hành spa</a></li>
-									<li><a href="#">Kinh nghiệm Marketing Spa</a></li>
-									<li><a href="#">Chăm sóc khách hàng</a></li>
-									<li><a href="#">Tăng doanh thu Spa</a></li>
-									<li><a href="#">Nâng cấp chất lượng Spa</a></li>
-									<li><a href="#">Tìm kiếm khách hàng cho Spa</a></li>
-								</ul>
+							<li data-stt="4"><a href="/khach-hang"><span>05.</span>Khách Hàng</a>
+							<li data-stt="5">
+								<?php
+								$value = get_terms(
+									array(
+										'taxonomy'   => 'category',
+										'hide_empty' => false,
+										'parent' => 0,
+										'number' => 1,
+									)
+								);
+								if (!empty($value) && is_array($value)) {
+									foreach ($value as $key) { ?>
+										<a href="<?php echo esc_url(get_term_link($key)) ?>"><span>06.</span>Blogs</a>
+										<ul class="header-top__menu-sub">
+											<?php
+											$value1 = get_terms(
+												array(
+													'taxonomy'   => 'category',
+													'hide_empty' => false,
+													'parent' => $key->term_id,
+												)
+											);
+											if (!empty($value1) && is_array($value1)) {
+												foreach ($value1 as $key) { ?>
+													<li><a href="<?php echo esc_url(get_term_link($key)) ?>">
+															<?php echo $key->name; ?>
+														</a>
+													</li>
+											<?php
+												}
+											} ?>
+										</ul>
+								<?php
+									}
+								} ?>
 							</li>
-							<li data-stt="6"><a href="/ver2/gioi-thieu.html" title="Giới thiệu"><span>07.</span>Giới thiệu</a></li>
+							<!-- <li data-stt="6"><a href="gioi-thieu"><span>07.</span>Giới thiệu</a></li> -->
 							<div class="menu-fixed-background-move">
 							</div>
 						</ul>
@@ -196,7 +237,7 @@
 			<div class="menu-mobi">
 				<ul class="menu-mobi__nav">
 					<li class="menu-mobi__nav-item">
-						<a class="active" href="/ver2" title="Trang chủ">
+						<a class="active" href="/">
 							<span>01.</span> Trang chủ
 						</a>
 					</li>
@@ -208,57 +249,82 @@
 							</div>
 						</a>
 						<ul class="menu-mobi__sub">
-							<li><a href="/ver2/video-diem-noi-bat.html">Video điểm nổi bật
+							<li><a href="/video-diem-noi-bat">Video điểm nổi bật
 								</a></li>
-							<li><a href="chi-tiet-chuc-nang-phan-mem-quan-li-spa-ezs.html">Chi tiết chức năng</a></li>
+							<li><a href="/chi-tiet-chuc-nang">Chi tiết chức năng</a></li>
 
 						</ul>
 					</li>
 					<li class="menu-mobi__nav-item">
-						<a href="/ver2/bang-gia.html" title="Bảng giá">
+						<a href="/bang-gia">
 							<span>03.</span> Bảng giá
 						</a>
 					</li>
 					<li class="menu-mobi__nav-item">
-						<a href="#system" title="Quy trình">
+						<a href="#system">
 							<span>04.</span> Quy trình
 							<div class="menu-mobi__icon-arrow">
 								<i class="fal fa-plus"></i>
 							</div>
 						</a>
 						<ul class="menu-mobi__sub">
-							<li><a href="/ver2/quy-trinh.html#tuvan-demo">Tư vấn - demo</a></li>
-							<li><a href="/ver2/quy-trinh.html#hopdong-thanhtoan">Ký hợp đồng - Thanh toán</a></li>
-							<li><a href="/ver2/quy-trinh.html#bangiao-huongdan">Bàn giao - Hướng dẫn sử dụng</a></li>
-							<li><a href="/ver2/quy-trinh.html#baohanh-hotro">Bảo hành - Hỗ trợ - Nâng cấp</a></li>
+							<li><a href="/quy-trinh?#tuvan-demo">Tư vấn - demo</a></li>
+							<li><a href="/quy-trinh?#hopdong-thanhtoan">Ký hợp đồng - Thanh toán</a></li>
+							<li><a href="/quy-trinh?#bangiao-huongdan">Bàn giao - Hướng dẫn sử dụng</a></li>
+							<li><a href="/quy-trinh?#baohanh-hotro">Bảo hành - Hỗ trợ - Nâng cấp</a></li>
 						</ul>
 					</li>
 					<li class="menu-mobi__nav-item">
-						<a href="/ver2/khach-hang.html" title="Khách Hàng">
+						<a href="khach-hang">
 							<span>05.</span> Khách hàng
 						</a>
 					</li>
 					<li class="menu-mobi__nav-item">
-						<a href="#email" title="blogs">
-							<span>06.</span> blogs
-							<div class="menu-mobi__icon-arrow">
-								<i class="fal fa-plus"></i>
-							</div>
-						</a>
-						<ul class="menu-mobi__sub">
-							<li><a href="#">Quản lý và vận hành spa</a></li>
-							<li><a href="#">Kinh nghiệm Marketing Spa</a></li>
-							<li><a href="#">Chăm sóc khách hàng</a></li>
-							<li><a href="#">Tăng doanh thu Spa</a></li>
-							<li><a href="#">Nâng cấp chất lượng Spa</a></li>
-							<li><a href="#">Tìm kiếm khách hàng cho Spa</a></li>
-						</ul>
+						<?php
+						$value = get_terms(
+							array(
+								'taxonomy'   => 'category',
+								'hide_empty' => false,
+								'parent' => 0,
+								'number' => 1,
+							)
+						);
+						if (!empty($value) && is_array($value)) {
+							foreach ($value as $key) { ?>
+								<a href="<?php echo esc_url(get_term_link($key)) ?>">
+									<span>06.</span> blogs
+									<div class="menu-mobi__icon-arrow">
+										<i class="fal fa-plus"></i>
+									</div>
+								</a>
+								<ul class="menu-mobi__sub">
+									<?php
+									$value1 = get_terms(
+										array(
+											'taxonomy'   => 'category',
+											'hide_empty' => false,
+											'parent' => $key->term_id,
+										)
+									);
+									if (!empty($value1) && is_array($value1)) {
+										foreach ($value1 as $key) { ?>
+											<li><a href="<?php echo esc_url(get_term_link($key)) ?>">
+													<?php echo $key->name; ?>
+												</a>
+											</li>
+									<?php
+										}
+									} ?>
+								</ul>
+						<?php
+							}
+						} ?>
 					</li>
-					<li class="menu-mobi__nav-item">
-						<a href="/ver2/gioi-thieu.html" title="Giới thiệu">
+					<!-- <li class="menu-mobi__nav-item">
+						<a href="gioi-thieu">
 							<span>07.</span> giới thiệu
 						</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>

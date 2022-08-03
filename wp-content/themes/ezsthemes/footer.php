@@ -3,7 +3,13 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="footer-logo">
-                    <a href="/"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo-trang.png" alt="Phần mềm quản lý Spa - Thẩm mỹ viện EZS" class="lazyloaded" data-ll-status="loaded"><noscript><img src="https://ezs.vn/wp-content/uploads/2019/10/logo-footer.png" alt="Phần mềm quản lý Spa - Thẩm mỹ viện EZS" /></noscript></a>
+                    <a href="/"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo-trang.png" alt="Phần mềm quản lý Spa - Thẩm mỹ viện EZS" class="lazyloaded" data-ll-status="loaded"></a>
+                </div>
+                <div class="footer-name">
+                    Công ty TNHH EZS Việt Nam
+                </div>
+                <div class="footer-code">
+                    Mã số thuế 0108819718
                 </div>
                 <div class="footer-info">
                     <p>
@@ -41,38 +47,22 @@
                     </a>
                     <div style="width: 150px">
                         <a href="http://online.gov.vn/Home/WebDetails/80294">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/283872432_3156937807907542_5452437372904168694_n.png" alt="EZS" class="lazyloaded" data-ll-status="loaded"><noscript><img src="<?php echo get_template_directory_uri() ?>/assets/img/283872432_3156937807907542_5452437372904168694_n.png" alt="EZS"></noscript>
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/283872432_3156937807907542_5452437372904168694_n.png" alt="EZS" class="lazyloaded" data-ll-status="loaded">
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-9 col-lg-4 order-lg-3">
+            <div class="col-12 col-md-9 col-lg-5 order-lg-3">
                 <div class="footer-nvtalk">
-                    <p>" <strong>EZS - Đối tác không thể thiếu khi bạn kinh doanh SPA / Thẩm mỹ viện</strong></p>
-                    <p>Chúng tôi cung cấp giải pháp quản trị 5 sao giúp tăng doanh số, tìm kiếm khách hàng, giảm chi phí quản lý và nâng cao chất lượng dịch vụ cho các SPA / Thẩm mỹ viện "</p>
+                    <p class="mb-10px">" <strong>EZS - Đối tác không thể thiếu khi bạn kinh doanh SPA / Thẩm mỹ viện</strong> "</p>
+                    <p class="mb-30px">Chúng tôi cung cấp giải pháp quản trị 5 sao giúp tăng doanh số, tìm kiếm khách hàng, giảm chi phí quản lý và nâng cao chất lượng dịch vụ cho các SPA / Thẩm mỹ viện.</p>
                     <p><em>EZ - Nhân vật đại diện thương hiệu EZS.VN</em></p>
                 </div>
             </div>
             <div class="col-12 col-md-3 text-md-right d-flex d-sm-block justify-content-between">
-                <a class="d-block d-sm-none" href="/"><img class="footer-nv home-lazy lazyloaded" src="https://ezs.vn/wp-content/uploads/2019/10/home-dolphin.png" alt="Cá heo - nhân vật EZS" data-ll-status="loaded" style="max-width: 90px;"><noscript><img class="footer-nv home-lazy" src="https://ezs.vn/wp-content/uploads/2019/10/home-dolphin.png" alt="Cá heo - nhân vật EZS" style="max-width: 90px;" /></noscript></a>
-                <ul style="list-style: none; padding-right: 30px;margin-bottom: 30px;">
-                    <li>
-                        <a style="line-height: 22px; margin-bottom: 8px; display: inline-block;text-decoration: revert;" href="https://ezs.vn/trung-tam-ho-tro.html">Trung tâm hỗ trợ</a>
-                    </li>
-                    <li>
-                        <a style="line-height: 22px; margin-bottom: 8px; display: inline-block;text-decoration: revert;" href="https://ezs.vn/hinh-thuc-thanh-toan.html">Hình thức thanh toán</a>
-                    </li>
-                    <li>
-                        <a style="line-height: 22px; margin-bottom: 8px; display: inline-block;text-decoration: revert;" href="https://ezs.vn/quy-dinh-su-dung.html">Quy định sử dụng</a>
-                    </li>
-                    <li>
-                        <a style="line-height: 22px; margin-bottom: 8px; display: inline-block;text-decoration: revert;" href="https://ezs.vn/chinh-sach-bao-mat.html">Chính sách bảo mật</a>
-                    </li>
-                </ul>
-                <a class="d-none d-sm-block" href="/">
-                    <img class="footer-nv home-lazy lazyloaded" src="https://ezs.vn/wp-content/uploads/2019/10/home-dolphin.png" alt="Cá heo - nhân vật EZS" data-ll-status="loaded"><noscript>
-                        <img class="footer-nv home-lazy" src="https://ezs.vn/wp-content/uploads/2019/10/home-dolphin.png" alt="Cá heo - nhân vật EZS" />
-                    </noscript></a>
+                <a class="d-block d-sm-none" href="/"><img class="footer-nv home-lazy lazyloaded" src="<?php echo get_template_directory_uri() ?>/assets/img/home-dolphin.png" alt="Cá heo - nhân vật EZS" data-ll-status="loaded" style="max-width: 90px;"></a>
+                <a class="d-none d-sm-block mt-60px" href="/">
+                    <img class="footer-nv home-lazy lazyloaded" src="<?php echo get_template_directory_uri() ?>/assets/img/home-dolphin.png" alt="Cá heo - nhân vật EZS" data-ll-status="loaded"></a>
             </div>
         </div>
     </div>
@@ -99,6 +89,8 @@
 <script src="<?php echo get_template_directory_uri() ?>/assets/lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/assets/lib/owl-carousel/owl.carousel.min.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/assets/js/demo.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/blog-detail.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/price.js"></script>
 <script>
     jQuery.event.special.touchstart = {
         setup: function(_, ns, handle) {
