@@ -88,7 +88,8 @@
 <!-- Owl Carousel 2 core js -->
 <script src="<?php echo get_template_directory_uri() ?>/assets/lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/assets/lib/owl-carousel/owl.carousel.min.js"></script>
-<script src="<?php echo get_template_directory_uri() ?>/assets/js/demo.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/lib/theia-sticky/theia-sticky-sidebar.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/demo.js?1"></script>
 <script src="<?php echo get_template_directory_uri() ?>/assets/js/blog-detail.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/assets/js/price.js"></script>
 <script>
