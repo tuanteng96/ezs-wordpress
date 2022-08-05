@@ -18,9 +18,16 @@ get_header();
     <div class="inner-wrap-title text-center">
         <div class="container">
             <div class="inner-wrap_content">
-                <h1>TeleSale tự động</h1>
+                <h1>
+                    <?php $category = get_the_category();
+                    $firstCategory = $category[0]->cat_name; echo $firstCategory;?>
+                </h1>
                 <div class="desc">
-                    adadad
+                <?php
+                    if ( function_exists('yoast_breadcrumb') ) {
+                    yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+                    }
+                    ?>
                 </div>
             </div>
         </div>

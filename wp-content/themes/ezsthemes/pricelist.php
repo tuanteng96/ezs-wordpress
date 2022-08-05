@@ -102,4 +102,7 @@ get_header();
         </div>
     </div>
 </div>
+<div class="footer-pattern-hidden bg-main">
+    <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-5.png" alt="logo">
+</div>
 <?php get_footer();
