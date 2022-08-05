@@ -9,6 +9,15 @@ get_header();
 <div id="main">
     <div class="inner-wrap">
     </div>
+    <div class="inner-wrap-title text-center">
+        <div class="container">
+            <div class="inner-wrap_content">
+                <h1>9 năm - 1500 Khách hàng</h1>
+                <div class="desc">Chúng tôi yêu thích và hiểu rõ cách làm thế nào để giúp website hỗ trợ tốt nhất cho chuyện kinh doanh của bạn.</div>
+            </div>
+        </div>
+        <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
+    </div>
     <div class="container">
         <div class="customer-header">
             <div class="row">
@@ -37,7 +46,7 @@ get_header();
                 $wp_query->in_the_loop = true; ?>
                 <?php $i = 0 ?>
                 <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-                    <div class="customer-charactor__box <?php if($i%2==0) echo 'flex-md-row-reverse' ?>">
+                    <div class="customer-charactor__box <?php if ($i % 2 == 0) echo 'flex-md-row-reverse' ?>">
                         <figure class="customer-charactor__box-detail" style="background-image:url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>">
                         </figure>
                         <div class="customer-charactor__content">
@@ -170,5 +179,8 @@ get_header();
             </div>
         </div>
     </div>
+</div>
+<div class="footer-pattern-hidden bg-main">
+    <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-5.png" alt="logo">
 </div>
 <?php get_footer();

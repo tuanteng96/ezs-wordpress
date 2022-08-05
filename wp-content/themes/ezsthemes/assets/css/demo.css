@@ -953,6 +953,36 @@ body {
     /* margin-bottom: 30px; */
 }
 
+.inner-wrap-title {
+    background: #ff898d;
+    border-top: 1px solid #ffabae;
+}
+
+.inner-wrap-title .inner-wrap_content {
+    padding: 60px 0 45px;
+}
+
+.inner-wrap-title .inner-wrap_content h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -.8px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-bottom: 0;
+}
+
+.inner-wrap-title .inner-wrap_content .desc {
+    color: rgb(255 255 255 / 75%);
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.inner-wrap-title .inner-wrap_content .desc:empty {
+    display: none;
+}
+
 
 /* end function */
 
@@ -4358,6 +4388,39 @@ div.domain.table-data select {
     font-size: 14px;
 }
 
+.footer .footer-pattern {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% - 2px);
+    max-width: 100%;
+}
+
+.footer-pattern-hidden.bg-main {
+    background: #f7f7f7;
+}
+
+.footer-pattern-hidden.bg-home {
+    background: #f0f5f7;
+}
+
+.footer-pattern-hidden img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* .footer::before {
+    content: "";
+    background: url(../img/pattern-5.png);
+    position: absolute;
+    width: 100%;
+    height: 65px;
+    top: -64px;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+
 .footer [class*="col-"] {
     padding: 15px;
 }
@@ -4581,7 +4644,7 @@ img {
     .review-app .owl-item:nth-child(2n) .review-app__slider-image {
         padding: 87px 0 140px;
     }
-    .review-app .owl-item:nth-child(2n + 1) .review-app__slider-image {
+    .review-app .owl-item:nth-child(2n+1) .review-app__slider-image {
         padding: 87px 0 100px;
     }
     .review-app__slider-image img {
@@ -5470,7 +5533,7 @@ img {
     .review-app .owl-item:nth-child(2n) .review-app__slider-image {
         padding: 30px 0 100px;
     }
-    .review-app .owl-item:nth-child(2n + 1) .review-app__slider-image {
+    .review-app .owl-item:nth-child(2n+1) .review-app__slider-image {
         padding: 30px 0 100px;
     }
     .introduce-box__title {
@@ -5606,7 +5669,7 @@ img {
 }
 
 @media (max-width: 400px) {
-    #email .table-row .table-data:nth-child(2n + 2) {
+    #email .table-row .table-data:nth-child(2n+2) {
         padding: 0;
     }
     #email div.domain.table-data {

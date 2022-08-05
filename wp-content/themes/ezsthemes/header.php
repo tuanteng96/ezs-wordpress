@@ -20,7 +20,7 @@
 	<link type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/lib/owl-carousel/owl.carousel.min.css" rel="stylesheet" />
 
 	<!-- Bootstrap 4 -->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/lib/bootstrap/css/bootstrap.css?1">
 
 	<!-- PLUGINS SLICKSLIDER -->
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/lib/slick/slick/slick.css" />
@@ -30,18 +30,18 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/lib/jq/jquery-3.6.0.js"></script>
 	<script src="<?php echo get_template_directory_uri() ?>/assets/lib/dragui/jquery-ui.js"></script>
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?1">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?3">
 
 	<?php wp_head(); ?>
 
 </head>
 
-<body>
+<body <?php body_class() ?>>
 
 	<header>
 		<div class="header-top">
 			<div class="header-top__logo">
-				<a href="/">
+				<a href="<?php echo home_url(); ?>">
 					<img width="74" height="25" src="<?php echo get_template_directory_uri() ?>/assets/img/logo-trang.png" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image">
 				</a>
 			</div>
@@ -49,19 +49,36 @@
 				<div>
 					<div class="header-top__menu-detail">
 						<ul>
-							<li data-stt="0"><a href="/"><span>01.</span>Trang chủ</a>
-
-							</li>
-							<li data-stt="1"><a href="#app"><span>02.</span>Giải pháp</a>
+							<li data-stt="0"><a href="<?php echo home_url(); ?>"><span>01.</span>Trang chủ</a></li>
+							<li data-stt="1">
+								<?php if (is_home()) : ?>
+									<a href="#app"><span>02.</span>Giải pháp</a>
+								<?php endif; ?>
+								<?php if (!is_home()) : ?>
+									<a href="<?php echo home_url(); ?>#app"><span>02.</span>Giải pháp</a>
+								<?php endif; ?>
 								<ul class="header-top__menu-sub">
-									<li><a href="/video-diem-noi-bat">Video điểm nổi bật
-										</a></li>
-									<li><a href="/chi-tiet-chuc-nang">Chi tiết chức
-											năng</a></li>
-
+									<li>
+										<?php $the_query = new WP_Query('page_id=3195'); ?>
+										<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+											<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
+										<?php endwhile; ?>
+									</li>
+									<li>
+										<?php $the_query = new WP_Query('page_id=3197'); ?>
+										<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+											<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
+										<?php endwhile; ?>
+									</li>
 								</ul>
 							</li>
-							<li data-stt="2"><a href="/bang-gia"><span>03.</span>BẢNG GIÁ</a>
+							<li data-stt="2">
+								<?php $the_query = new WP_Query('page_id=3193'); ?>
+								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+									<a href="<?php echo get_page_link() ?>">
+										<span>03.</span><?php the_title(); ?>
+									</a>
+								<?php endwhile; ?>
 							</li>
 							<li data-stt="3"><a href="#system"><span>04.</span>QUY TRÌNH</a>
 								<ul class="header-top__menu-sub">
@@ -74,7 +91,14 @@
 									</li>
 								</ul>
 							</li>
-							<li data-stt="4"><a href="/khach-hang"><span>05.</span>Khách Hàng</a></li>
+							<li data-stt="4">
+								<?php $the_query = new WP_Query('page_id=3188'); ?>
+								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+									<a href="<?php echo get_page_link() ?>">
+										<span>05.</span><?php the_title(); ?>
+									</a>
+								<?php endwhile; ?>
+							</li>
 							<li data-stt="5">
 								<?php
 								$value = get_terms(
@@ -129,7 +153,7 @@
 		</div>
 		<div class="header-fixed">
 			<div class="header-fixed__logo">
-				<a href="/">
+				<a href="<?php echo home_url(); ?>">
 					<img width="74" height="25" src="<?php echo get_template_directory_uri() ?>/assets/img/logo-mau.png" class="qodef-header-logo-image qodef--light" alt="logo light" itemprop="image">
 				</a>
 			</div>
@@ -138,18 +162,37 @@
 
 					<div class="header-fixed__menu-detail h-100">
 						<ul class="d-inline-flex h-100 align-items-center">
-							<li data-stt="0"><a href="/" title="Trang chủ"><span>01.</span>Trang chủ</a>
-
-							</li>
-							<li data-stt="1"><a href="#app" title="Giải pháp"><span>02.</span>Giải pháp</a>
+							<li data-stt="0"><a href="<?php echo home_url(); ?>" title="Trang chủ"><span>01.</span>Trang chủ</a></li>
+							<li data-stt="1">
+								<?php if (is_home()) : ?>
+									<a href="#app"><span>02.</span>Giải pháp</a>
+								<?php endif; ?>
+								<?php if (!is_home()) : ?>
+									<a href="<?php echo home_url(); ?>#app"><span>02.</span>Giải pháp</a>
+								<?php endif; ?>
 								<ul class="header-top__menu-sub">
-									<li><a href="/video-diem-noi-bat">Video điểm nổi bật</a></li>
-									<li><a href="/chi-tiet-chuc-nang">Chi tiết chức
-											năng</a></li>
+									<li>
+										<?php $the_query = new WP_Query('page_id=3195'); ?>
+										<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+											<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
+										<?php endwhile; ?>
+									</li>
+									<li>
+										<?php $the_query = new WP_Query('page_id=3197'); ?>
+										<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+											<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
+										<?php endwhile; ?>
+									</li>
 
 								</ul>
 							</li>
-							<li data-stt="2"><a href="/bang-gia"><span>03.</span>BẢNG GIÁ</a>
+							<li data-stt="2">
+								<?php $the_query = new WP_Query('page_id=3193'); ?>
+								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+									<a href="<?php echo get_page_link() ?>">
+										<span>03.</span><?php the_title(); ?>
+									</a>
+								<?php endwhile; ?>
 							</li>
 							<li data-stt="3"><a href="#system"><span>04.</span>QUY TRÌNH</a>
 								<ul class="header-top__menu-sub">
@@ -162,7 +205,14 @@
 									</li>
 								</ul>
 							</li>
-							<li data-stt="4"><a href="/khach-hang"><span>05.</span>Khách Hàng</a>
+							<li data-stt="4">
+								<?php $the_query = new WP_Query('page_id=3188'); ?>
+								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+									<a href="<?php echo get_page_link() ?>">
+										<span>05.</span><?php the_title(); ?>
+									</a>
+								<?php endwhile; ?>
+							</li>
 							<li data-stt="5">
 								<?php
 								$value = get_terms(
@@ -223,7 +273,9 @@
 					<a href="tel:0981883338"></a>
 				</div>
 				<div>
-					<img src="<?php echo get_template_directory_uri() ?>/assets/img/logo-trang.png" alt="logo" width="74" height="25">
+					<a href="<?php echo home_url(); ?>">
+						<img src="<?php echo get_template_directory_uri() ?>/assets/img/logo-trang.png" alt="logo" width="74" height="25">
+					</a>
 				</div>
 				<div class="nav-menu">
 					<div class="icon-menu-1">
@@ -237,28 +289,49 @@
 			<div class="menu-mobi">
 				<ul class="menu-mobi__nav">
 					<li class="menu-mobi__nav-item">
-						<a class="active" href="/">
+						<a class="active" href="<?php echo home_url(); ?>">
 							<span>01.</span> Trang chủ
 						</a>
 					</li>
 					<li class="menu-mobi__nav-item">
-						<a href="#app" title="Giải pháp">
-							<span>02.</span> Giải pháp
-							<div class="menu-mobi__icon-arrow">
-								<i class="fal fa-plus"></i>
-							</div>
-						</a>
+						<?php if (is_home()) : ?>
+							<a href="#app">
+								<span>02.</span> Giải pháp
+								<div class="menu-mobi__icon-arrow">
+									<i class="fal fa-plus"></i>
+								</div>
+							</a>
+						<?php endif; ?>
+						<?php if (!is_home()) : ?>
+							<a href="<?php echo home_url(); ?>#app">
+								<span>02.</span> Giải pháp
+								<div class="menu-mobi__icon-arrow">
+									<i class="fal fa-plus"></i>
+								</div>
+							</a>
+						<?php endif; ?>
 						<ul class="menu-mobi__sub">
-							<li><a href="/video-diem-noi-bat">Video điểm nổi bật
-								</a></li>
-							<li><a href="/chi-tiet-chuc-nang">Chi tiết chức năng</a></li>
-
+							<li>
+								<?php $the_query = new WP_Query('page_id=3195'); ?>
+								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+									<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
+								<?php endwhile; ?>
+							</li>
+							<li>
+								<?php $the_query = new WP_Query('page_id=3197'); ?>
+								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+									<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
+								<?php endwhile; ?>
+							</li>
 						</ul>
 					</li>
 					<li class="menu-mobi__nav-item">
-						<a href="/bang-gia">
-							<span>03.</span> Bảng giá
-						</a>
+						<?php $the_query = new WP_Query('page_id=3193'); ?>
+						<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+							<a href="<?php echo get_page_link() ?>">
+								<span>03.</span><?php the_title(); ?>
+							</a>
+						<?php endwhile; ?>
 					</li>
 					<li class="menu-mobi__nav-item">
 						<a href="#system">
@@ -275,9 +348,12 @@
 						</ul>
 					</li>
 					<li class="menu-mobi__nav-item">
-						<a href="khach-hang">
-							<span>05.</span> Khách hàng
-						</a>
+						<?php $the_query = new WP_Query('page_id=3188'); ?>
+						<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+							<a href="<?php echo get_page_link() ?>">
+								<span>05.</span><?php the_title(); ?>
+							</a>
+						<?php endwhile; ?>
 					</li>
 					<li class="menu-mobi__nav-item">
 						<?php
@@ -329,3 +405,4 @@
 			</div>
 		</div>
 	</header>
+	<?php wp_reset_postdata() ?>

@@ -2,25 +2,21 @@
 get_header(); ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/blog.css?4">
 <div id="main">
-    <div class="inner-wrap">
+    <div class="inner-wrap"></div>
+    <div class="inner-wrap-title text-center">
+        <div class="container">
+            <div class="inner-wrap_content">
+                <h1><?php single_cat_title(); ?></h1>
+                <div class="desc"><?php the_archive_description(); ?></div>
+            </div>
+        </div>
+        <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
     </div>
     <main class="l-main -blog ">
         <?php $term = get_queried_object(); ?>
-        <section class="c-blogHero -business -pt60 -pb60 -pt40sm -pb48sm -bgDark" style="background-image: url(<?php the_field('thumbnail_category', $term) ?>)">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h2 class="t-title -f40_56 -f28sm -mb16 -cWhite"><?php single_cat_title(); ?></h2>
-                        <div class="t-text -f14_28 -mb32 -cGreyMedium">
-                            <?php the_archive_description(); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="c-blogArticlesSec -bgGreyLight">
+        <section class="c-blogArticlesSec">
             <div class="container -xsFullWidth">
-                <div class="row c-blogArticlesSec_row -list -pt60 -pt0xs">
+                <div class="row c-blogArticlesSec_row -list -pt50 -pt0xs">
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
                             <div class="col-md-6 col-xl-4 -mb40 -mb80sm">
@@ -73,5 +69,8 @@ get_header(); ?>
             </div>
         </section>
     </main>
+</div>
+<div class="footer-pattern-hidden bg-main">
+    <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-5.png" alt="logo">
 </div>
 <?php get_footer();

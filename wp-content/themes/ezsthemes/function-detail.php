@@ -9,6 +9,14 @@ get_header();
 <div id="main">
     <div class="inner-wrap">
     </div>
+    <div class="inner-wrap-title text-center">
+        <div class="container">
+            <div class="inner-wrap_content">
+                <h1>Chi tiết chức năng</h1>
+            </div>
+        </div>
+        <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
+    </div>
     <div id="function" class="pt-5">
         <h1>Chi tiết chức năng</h1>
         <div class="function-nav">

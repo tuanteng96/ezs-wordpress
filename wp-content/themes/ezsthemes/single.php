@@ -1,13 +1,12 @@
 <?php
 
 /**
- * The template for displaying all single posts
+ * The template for displaying archive pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package tiah
  */
-
 get_header();
 ?>
 
@@ -15,6 +14,17 @@ get_header();
 
 <div id="main">
     <div class="inner-wrap">
+    </div>
+    <div class="inner-wrap-title text-center">
+        <div class="container">
+            <div class="inner-wrap_content">
+                <h1>TeleSale tự động</h1>
+                <div class="desc">
+                    adadad
+                </div>
+            </div>
+        </div>
+        <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
     </div>
     <main class="l-main -blog">
         <article class="c-blogArticle">
