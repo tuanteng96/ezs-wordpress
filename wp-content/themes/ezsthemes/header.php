@@ -11,7 +11,7 @@
 	<!-- FONT ROBOTO -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
 	<!-- FONT ICONS -->
 	<link href="<?php echo get_template_directory_uri() ?>/assets/lib/font-awesome-pro/css/all.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/lib/jq/jquery-3.6.0.js"></script>
 	<script src="<?php echo get_template_directory_uri() ?>/assets/lib/dragui/jquery-ui.js"></script>
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?3">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?6">
 
 	<?php wp_head(); ?>
 

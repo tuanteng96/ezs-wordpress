@@ -13,6 +13,11 @@ body a:hover {
     text-decoration: none;
 }
 
+.font-number {
+    font-family: 'Poppins', sans-serif;
+    ;
+}
+
 .modal-backdrop {
     background: rgba(0, 0, 0, 0.5);
 }
@@ -649,6 +654,194 @@ body {
 
 #price-list {
     padding-bottom: 30px;
+}
+
+#price-list .price-list-box {
+    box-shadow: 0px 0px 20px 0px rgb(76 87 125 / 2%);
+    padding: 4.25rem 5rem 2.5rem 5rem;
+    border-radius: 0.5rem;
+}
+
+#price-list .price-list-box .nav-action {
+    background: #f5f8fa;
+    border-radius: 50rem;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+}
+
+#price-list .price-list-box .nav-action button.nav-action-btn {
+    padding: 0 1.25rem;
+    margin: 0.25rem;
+    height: 38px;
+    border-radius: 50rem;
+    border: 0;
+    background: transparent;
+    font-size: 13px;
+    color: #7E8299;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#price-list .price-list-box .nav-action button.nav-action-btn:focus {
+    outline: none;
+}
+
+#price-list .price-list-box .nav-action button.active {
+    background: #181C32;
+    color: #fff;
+}
+
+#price-list .price-list-box .price-head,
+#price-list .price-list-box .price-body-item {
+    display: flex;
+}
+
+#price-list .price-list-box .price-body {
+    margin-top: 4.25rem;
+}
+
+#price-list .price-list-box .price-body-item {
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+#price-list .price-list-box .price-body-item .w-year {
+    text-align: center;
+}
+
+#price-list .price-list-box .price-body-item .w-flex {
+    padding-left: 1.2rem;
+}
+
+#price-list .price-list-box .price-body-item:nth-child(odd) {
+    background: rgba(245, 248, 250, 0.75);
+}
+
+#price-list .price-list-box .price-body-item .price-content-title {
+    color: #181C32;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#price-list .price-list-box .price-body-item .price-content-desc {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.vertical-text-bottom {
+    vertical-align: text-bottom;
+    cursor: pointer;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    font-size: 1rem;
+    color: #3f4254;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0 solid rgba(0, 0, 0, .15);
+    border-radius: 0.42rem;
+    box-shadow: 0 0 50px 0 rgb(82 63 105 / 15%);
+    margin: 0.525rem 0 0;
+}
+
+.dropdown-menu a {
+    color: #181c32;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.form-count {
+    display: flex;
+    align-items: center;
+}
+
+.form-count label {
+    font-size: 14px;
+    margin-bottom: 0;
+    font-weight: 500;
+    flex: 1;
+    padding-right: 15px;
+}
+
+.form-count input {
+    width: 60px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #e4e6ef;
+    padding: 0.475rem 0.75rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.form-count input:focus {
+    box-shadow: none;
+}
+
+#price-list .price-list-box .price-body-item .price-s {
+    color: #181C32;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 5px;
+}
+
+#price-list .price-list-box .w-flex {
+    flex: 1;
+}
+
+#price-list .price-list-box .w-year {
+    width: 300px;
+}
+
+#price-list .price-list-box .card-price.bg-primary-2 {
+    background: rgb(53, 149, 246);
+    color: #fff;
+}
+
+#price-list .price-list-box .card-price {
+    text-align: center;
+    border-radius: 0.625rem;
+    padding: 3rem 1rem;
+}
+
+#price-list .price-list-box .card-price .price-t {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#price-list .price-list-box .card-price .price-d {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+#price-list .price-list-box .card-price .price-s1 .price-s1-d {
+    margin-top: 18px;
+    font-size: 1.5rem;
+    padding-right: 5px;
+    font-weight: 400;
+}
+
+#price-list .price-list-box .card-price .price-s1 .price-s1-p {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    font-weight: 600;
 }
 
 #price-list h3 {
@@ -4930,9 +5123,6 @@ img {
 @media (min-width: 993px) {
     #function .container {
         padding: 0 5%;
-    }
-    #price-list .container {
-        padding: 0 10%;
     }
     .introduce-box-main {
         padding-top: 10px;

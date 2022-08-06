@@ -20,83 +20,145 @@ get_header();
     </div>
     <div id="price-list" class="pt-5">
         <div class="container">
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="uu-dai">
-                    <!-- <h3>Bảng giá ưu đãi</h3> -->
-                    <table class="table table-bordered listed-price">
-                        <thead>
-                            <tr>
-                                <th scope="col" class="d-none d-md-table-cell">STT</th>
-                                <th scope="col">HẠNG MỤC</th>
-                                <th scope="col">NĂM ĐẦU</th>
-                                <th scope="col">NĂM TIẾP</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="d-none d-md-table-cell">1</td>
-                                <td class="table-more-infor">
-                                    <strong>Phí khởi tạo</strong> <br>
-                                    + Phần mềm quản lý spa <br>
-                                    + App khách hàng thương hiệu riêng 2 phiên bản android và IOS <br>
-                                    + Khởi tạo website giới thiệu Spa/ thẩm mỹ viện với tên miền riêng
-                                </td>
-                                <td class="value-first sale-price" value="19500000"><span>30.000.000</span><br>19.500.000</td>
-                                <td class="value-second" value="0">Miễn phí</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="5" class="d-none d-md-table-cell">2</td>
-                                <td colspan="3" class="table-more-infor">
-                                    <strong>Phí duy trì hàng năm</strong>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="table-more-infor table-select">Phí đăng ký tên miền
-                                    <span>.com</span><select class="form-select
-                                            aria-label=" Default select example">
-                                        <option value="300.000" value-real-first="300000" value-real-second="300000">.com</option>
-                                        <option value="550.000" value-real-first="550000" value-real-second="460000">.vn</option>
-                                        <option value="450.000" value-real-first="450000" value-real-second="360000">.com.vn</option>
-                                    </select>
-                                </td>
-                                <td class="value-first" value="300000">300.000</td>
-                                <td class="value-second" value="300000">300.000</td>
-                            </tr>
-                            <tr>
-                                <td class="table-more-infor">Phí chứng chỉ bảo mật tên miền [ SSL ]</td>
-                                <td class="sale-price value-first" value="0">
-                                    <span>200.000</span><br>Miễn phí
-                                </td>
-                                <td class="sale-price value-second" value="0">
-                                    <span>200.000</span><br>Miễn phí
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="table-more-infor">Phí tài khoản appstore [99$] <br>
-                                    Miễn phí duy trì app trên tài khoản chung của công ty EZS</td>
-                                <td class="sale-price value-first" value="0">
-                                    <span>2.400.000</span><br>Miễn phí
-                                </td>
-                                <td class="sale-price value-second" value="0">
-                                    <span>2.400.000</span><br>Miễn phí
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="table-more-infor basis">Phí duy trì hệ thống <span>[ 1 cơ sở ]</span>
-                                    <input type="number" placeholder="Số lượng">
-                                </td>
-                                <td class="value-first" value="3000000">3.000.000</td>
-                                <td class="value-second" value="3000000">3.000.000</td>
-                            </tr>
-                            <tr class="price-total">
-                                <td class="d-none d-md-table-cell">3</td>
-                                <td class="table-more-infor"><strong>Tổng</strong></td>
-                                <td class=""></td>
-                                <td class=""></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>(*) Chi phí trên chưa bao gồm Thuế & chi phí thiết bị</p>
+            <div class="bg-white price-list-box">
+                <div class="price-head">
+                    <div class="price-head-item w-flex d-flex align-items-center">
+                        <img class="w-100" src="<?php echo get_template_directory_uri() ?>/assets/img/sass-3-banner-image.png" alt="EZS - Phần mềm quản lý SPA">
+                    </div>
+                    <div class="price-head-item w-year">
+                        <div class="card-price bg-primary-2">
+                            <div class="price-t">Tổng chi phí</div>
+                            <div class="price-s1 d-flex justify-content-center align-items-start">
+                                <span class="price-s1-p font-number total-price-first">22.800.000</span>
+                            </div>
+                            <div class="price-d">Năm đầu tiên</div>
+                        </div>
+                    </div>
+                    <div class="price-head-item w-year">
+                        <div class="card-price">
+                            <div class="price-t">Tổng chi phí</div>
+                            <div class="price-s1 d-flex justify-content-center align-items-start">
+                                <span class="price-s1-p total-price">3.300.000</span>
+                            </div>
+                            <div class="price-d">Năm tiếp theo</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-body">
+                    <div class="price-body-item">
+                        <div class="price-head-item w-flex">
+                            <div class="price-content">
+                                <div class="price-content-title">Phần mềm, APP Android & IOS, Website</div>
+                                <div class="price-content-desc">
+                                    Phần mềm quản lý spa , App khách hàng thương hiệu riêng 2 phiên bản android và IOS, Khởi tạo website giới thiệu Spa/ thẩm mỹ viện với tên miền riêng
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-head-item w-year">
+                            <div class="price-s font-number" data-price-frist="19500000">
+                                19.500.000
+                            </div>
+                        </div>
+                        <div class="price-head-item w-year">
+                            <div class="price-s" data-price="0">
+                                Miễn phí
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-body-item">
+                        <div class="price-head-item w-flex">
+                            <div class="price-content-title">
+                                <div class="dropdown">
+                                    Phí đăng kí tên miền
+                                    <span class="text-success cursor-pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="domain-item-curent">.Com</span>
+                                        <i class="far fa-angle-down vertical-text-bottom"></i>
+                                    </span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item domain-item" data-value-first="300000" data-value="300000" href="javascript:;">.Com</a>
+                                        <a class="dropdown-item domain-item" data-value-first="550000" data-value="460000" href="javascript:;">.Com.Vn</a>
+                                        <a class="dropdown-item domain-item" data-value-first="450000" data-value="360000" href="javascript:;">.Vn</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-head-item w-year">
+                            <div class="price-s font-number domain-first" data-price-frist="300000">
+                                300.000
+                            </div>
+                        </div>
+                        <div class="price-head-item w-year">
+                            <div class="price-s domain" data-price="300000">
+                                300.000
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-body-item">
+                        <div class="price-head-item w-flex">
+                            <div class="price-content-title">
+                                Phí chứng chỉ bảo mật tên miền - <span class="text-danger font-number">SSL</span>
+                            </div>
+                        </div>
+                        <div class="price-head-item w-year">
+                            <div class="price-s font-number" data-price-frist="0">
+                                Miễn phí
+                            </div>
+                        </div>
+                        <div class="price-head-item w-year" data-price="0">
+                            <div class="price-s">
+                                Miễn phí
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-body-item">
+                        <div class="price-head-item w-flex">
+                            <div class="price-content-title">
+                                Phí tài khoản Appstore - <span class="text-danger font-number">99$ / 1 năm</span>
+                            </div>
+                            <div class="price-content-desc">
+                                Miễn phí duy trì app trên tài khoản chung của công ty EZS
+                            </div>
+                        </div>
+                        <div class="price-head-item w-year">
+                            <div class="price-s font-number" data-price-frist="0">
+                                Miễn phí
+                            </div>
+                        </div>
+                        <div class="price-head-item w-year" data-price-frist="0">
+                            <div class="price-s">
+                                Miễn phí
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-body-item">
+                        <div class="price-head-item w-flex">
+                            <div class="price-content-title">
+                                <div class="dropdown">
+                                    Phí duy trì hệ thống có
+                                    <span class="text-success cursor-pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="total-count font-number">1</span> cơ sở
+                                        <i class="far fa-angle-down vertical-text-bottom"></i>
+                                    </span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <div class="px-3 py-1 form-count">
+                                            <label>Nhập số cơ sở</label>
+                                            <input type="number" min="1" class="form-control input-count" placeholder="Nhập số cơ sở" value="1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-head-item w-year">
+                            <div class="price-s font-number cs-first" data-price-frist="3000000">
+                                3.000.000
+                            </div>
+                        </div>
+                        <div class="price-head-item w-year cs" data-price="3000000">
+                            <div class="price-s">
+                                3.000.000
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

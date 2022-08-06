@@ -1,11 +1,14 @@
 $(document).ready(function() {
-    // $('.menu-mobi__icon-arrow').click(function () {
-    //     var t = $(this)
-    //     t.parent().next('ul').slideToggle()
-    //     t.find('i').toggleClass('fa-plus fa-minus')
-    //     t.parents('li').siblings().find('ul').slideUp()
-    //     t.parents('li').siblings().find('i').removeClass(' fa-minus').addClass('fa-plus')
-    // })
+    // Price Change ====================
+    EzsChangePrice.init()
+        // ====================
+        // $('.menu-mobi__icon-arrow').click(function () {
+        //     var t = $(this)
+        //     t.parent().next('ul').slideToggle()
+        //     t.find('i').toggleClass('fa-plus fa-minus')
+        //     t.parents('li').siblings().find('ul').slideUp()
+        //     t.parents('li').siblings().find('i').removeClass(' fa-minus').addClass('fa-plus')
+        // })
 
     $('.-blog-main, .-blog-sidebar').theiaStickySidebar({
         // Settings
@@ -307,3 +310,53 @@ $(document).ready(function() {
         n(".main-head .main-head__img-before", 800),
         n(".main-head .main-head__img-after", 1e3);
 });
+
+var EzsChangePrice = {
+    init: () => {
+        EzsChangePrice.render();
+        $(".domain-item").click((e) => {
+            const { innerText, dataset } = e.target;
+            $(".domain-item-curent").html(innerText);
+            $(".domain-first").html(EzsChangePrice.formatVND(Number(dataset.valueFirst))).attr("data-price-frist", dataset.valueFirst)
+            $(".domain").html(EzsChangePrice.formatVND(Number(dataset.value))).attr("data-price", dataset.value)
+            EzsChangePrice.render();
+        })
+        $(".input-count").on("keyup", function(e) {
+            if (!e.target.value || Number(e.target.value) < 1) return;
+            let totalFirst = 0;
+            let total = 0;
+            if (e.target.value > 5) {
+                totalFirst = 2000000 * Number(e.target.value);
+                total = 2000000 * Number(e.target.value);
+            } else {
+                totalFirst = 3000000 * Number(e.target.value);
+                total = 3000000 * Number(e.target.value);
+            }
+            $(".cs-first").html(EzsChangePrice.formatVND(totalFirst)).attr("data-price-frist", totalFirst)
+            $(".cs").html(EzsChangePrice.formatVND(total)).attr("data-price", total)
+            $(".total-count").html(e.target.value)
+            EzsChangePrice.render();
+        })
+    },
+    render: () => {
+        const elPriceFirst = $(".total-price-first");
+        const elPrice = $(".total-price");
+        elPriceFirst.html(EzsChangePrice.formatVND(EzsChangePrice.getTotal("[data-price-frist]", "data-price-frist")))
+        elPrice.html(EzsChangePrice.formatVND(EzsChangePrice.getTotal("[data-price]", "data-price")))
+    },
+    getTotal: (el, attr) => {
+        let total = 0;
+        $(el).each(function() {
+            const elmPrice = $(this).attr(attr);
+            total += Number(elmPrice)
+        });
+        return total
+    },
+    formatVND: price => {
+        if (!price || price === 0) {
+            return '0'
+        } else {
+            return price.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
+        }
+    },
+}
