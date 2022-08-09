@@ -17,8 +17,48 @@ get_header();
         </div>
         <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
     </div>
+    <div class="fc-detail">
+        <div class="fc-detail-header">
+            <div class="container not-fix-container">
+                <div class="fc-tabs">
+                    <ul class="fc-tab">
+                        <li class="active">
+                            <span class="text-uppercase title">Cài đặt</span>
+                            <span class="text-gray-500 desc">Cài đặt hệ thống</span>
+                        </li>
+                        <li>
+                            <span class="text-uppercase title">Quản lý</span>
+                            <span class="text-gray-500 desc">Pos quản lý tại điểm</span>
+                        </li>
+                        <li>
+                            <span class="text-uppercase title">Website</span>
+                            <span class="text-gray-500 desc">Quản lý Website</span>
+                        </li>
+                        <li>
+                            <span class="text-uppercase title">App</span>
+                            <span class="text-gray-500 desc">Quản lý App</span>
+                        </li>
+                        <li>
+                            <span class="text-uppercase title">Báo cáo</span>
+                            <span class="text-gray-500 desc">Quản lý thống kê</span>
+                        </li>
+                        <li>
+                            <span class="text-uppercase title">Thiết bị</span>
+                            <span class="text-gray-500 desc">Quản lý Thiết bị</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fc-detail-wrap">
+            <div class="container not-fix-container">
+                <div class="fc-detail-main">
+                    a
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="function" class="pt-5">
-        <h1>Chi tiết chức năng</h1>
         <div class="function-nav">
             <div id="function-nav">
                 <p class="active" to="function-setting">CÀI ĐẶT</p>
