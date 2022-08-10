@@ -30,7 +30,7 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/lib/jq/jquery-3.6.0.js"></script>
 	<script src="<?php echo get_template_directory_uri() ?>/assets/lib/dragui/jquery-ui.js"></script>
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?1">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?3">
 
 	<?php wp_head(); ?>
 
@@ -51,12 +51,7 @@
 						<ul>
 							<li data-stt="0"><a href="<?php echo home_url(); ?>"><span>01.</span>Trang chủ</a></li>
 							<li data-stt="1">
-								<?php if (is_home()) : ?>
-									<a href="#app"><span>02.</span>Giải pháp</a>
-								<?php endif; ?>
-								<?php if (!is_home()) : ?>
-									<a href="<?php echo home_url(); ?>#app"><span>02.</span>Giải pháp</a>
-								<?php endif; ?>
+								<a href="<?php echo home_url(); ?>#app"><span>02.</span>Giải pháp</a>
 								<ul class="header-top__menu-sub">
 									<li>
 										<?php $the_query = new WP_Query('page_id=3195'); ?>
@@ -80,16 +75,22 @@
 									</a>
 								<?php endwhile; ?>
 							</li>
-							<li data-stt="3"><a href="#system"><span>04.</span>QUY TRÌNH</a>
-								<ul class="header-top__menu-sub">
-									<li><a href="/quy-trinh?#tuvan-demo">Tư vấn - demo</a></li>
-									<li><a href="/quy-trinh?#hopdong-thanhtoan">Ký hợp đồng - Thanh toán</a>
-									</li>
-									<li><a href="/quy-trinh?#bangiao-huongdan">Bàn giao - Hướng dẫn sử dụng</a>
-									</li>
-									<li><a href="/quy-trinh?#baohanh-hotro">Bảo hành - Hỗ trợ - Nâng cấp</a>
-									</li>
-								</ul>
+							<li data-stt="3">
+								<?php $the_query = new WP_Query('page_id=3191'); ?>
+								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+									<a href="<?php echo home_url(); ?>#system">
+										<span>04.</span><?php the_title(); ?>
+									</a>
+									<ul class="header-top__menu-sub">
+										<li><a href="<?php echo get_page_link() ?>?tab=demo">Tư vấn - Demo</a></li>
+										<li><a href="<?php echo get_page_link() ?>?tab=pay">Ký hợp đồng - Thanh toán</a>
+										</li>
+										<li><a href="<?php echo get_page_link() ?>?tab=guide">Bàn giao - Hướng dẫn sử dụng</a>
+										</li>
+										<li><a href="<?php echo get_page_link() ?>?tab=support">Bảo hành - Hỗ trợ - Nâng cấp</a>
+										</li>
+									</ul>
+								<?php endwhile; ?>
 							</li>
 							<li data-stt="4">
 								<?php $the_query = new WP_Query('page_id=3188'); ?>
@@ -164,12 +165,7 @@
 						<ul class="d-inline-flex h-100 align-items-center">
 							<li data-stt="0"><a href="<?php echo home_url(); ?>" title="Trang chủ"><span>01.</span>Trang chủ</a></li>
 							<li data-stt="1">
-								<?php if (is_home()) : ?>
-									<a href="#app"><span>02.</span>Giải pháp</a>
-								<?php endif; ?>
-								<?php if (!is_home()) : ?>
-									<a href="<?php echo home_url(); ?>#app"><span>02.</span>Giải pháp</a>
-								<?php endif; ?>
+								<a href="<?php echo home_url(); ?>#app"><span>02.</span>Giải pháp</a>
 								<ul class="header-top__menu-sub">
 									<li>
 										<?php $the_query = new WP_Query('page_id=3195'); ?>
@@ -194,16 +190,22 @@
 									</a>
 								<?php endwhile; ?>
 							</li>
-							<li data-stt="3"><a href="#system"><span>04.</span>QUY TRÌNH</a>
-								<ul class="header-top__menu-sub">
-									<li><a href="/quy-trinh?#tuvan-demo">Tư vấn - demo</a></li>
-									<li><a href="/quy-trinh?#hopdong-thanhtoan">Ký hợp đồng - Thanh toán</a>
-									</li>
-									<li><a href="/quy-trinh?#bangiao-huongdan">Bàn giao - Hướng dẫn sử dụng</a>
-									</li>
-									<li><a href="/quy-trinh?#baohanh-hotro">Bảo hành - Hỗ trợ - Nâng cấp</a>
-									</li>
-								</ul>
+							<li data-stt="3">
+								<?php $the_query = new WP_Query('page_id=3191'); ?>
+								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+									<a href="<?php echo home_url(); ?>#system">
+										<span>04.</span><?php the_title(); ?>
+									</a>
+									<ul class="header-top__menu-sub">
+										<li><a href="<?php echo get_page_link() ?>?tab=demo">Tư vấn - Demo</a></li>
+										<li><a href="<?php echo get_page_link() ?>?tab=pay">Ký hợp đồng - Thanh toán</a>
+										</li>
+										<li><a href="<?php echo get_page_link() ?>?tab=guide">Bàn giao - Hướng dẫn sử dụng</a>
+										</li>
+										<li><a href="<?php echo get_page_link() ?>?tab=support">Bảo hành - Hỗ trợ - Nâng cấp</a>
+										</li>
+									</ul>
+								<?php endwhile; ?>
 							</li>
 							<li data-stt="4">
 								<?php $the_query = new WP_Query('page_id=3188'); ?>
@@ -334,18 +336,24 @@
 						<?php endwhile; ?>
 					</li>
 					<li class="menu-mobi__nav-item">
-						<a href="#system">
-							<span>04.</span> Quy trình
-							<div class="menu-mobi__icon-arrow">
-								<i class="fal fa-plus"></i>
-							</div>
-						</a>
-						<ul class="menu-mobi__sub">
-							<li><a href="/quy-trinh?#tuvan-demo">Tư vấn - demo</a></li>
-							<li><a href="/quy-trinh?#hopdong-thanhtoan">Ký hợp đồng - Thanh toán</a></li>
-							<li><a href="/quy-trinh?#bangiao-huongdan">Bàn giao - Hướng dẫn sử dụng</a></li>
-							<li><a href="/quy-trinh?#baohanh-hotro">Bảo hành - Hỗ trợ - Nâng cấp</a></li>
-						</ul>
+						<?php $the_query = new WP_Query('page_id=3191'); ?>
+						<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+							<a href="<?php echo home_url(); ?>#system">
+								<span>04.</span> <?php the_title(); ?>
+								<div class="menu-mobi__icon-arrow">
+									<i class="fal fa-plus"></i>
+								</div>
+							</a>
+							<ul class="menu-mobi__sub">
+								<li><a href="<?php echo get_page_link() ?>?tab=demo">Tư vấn - Demo</a></li>
+								<li><a href="<?php echo get_page_link() ?>?tab=pay">Ký hợp đồng - Thanh toán</a>
+								</li>
+								<li><a href="<?php echo get_page_link() ?>?tab=guide">Bàn giao - Hướng dẫn sử dụng</a>
+								</li>
+								<li><a href="<?php echo get_page_link() ?>?tab=support">Bảo hành - Hỗ trợ - Nâng cấp</a>
+								</li>
+							</ul>
+						<?php endwhile; ?>
 					</li>
 					<li class="menu-mobi__nav-item">
 						<?php $the_query = new WP_Query('page_id=3188'); ?>

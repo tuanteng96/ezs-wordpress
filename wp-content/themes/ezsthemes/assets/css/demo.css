@@ -2163,6 +2163,24 @@ code {
     border-radius: 12px 12px 0 0;
     box-shadow: none;
 }
+.fc-desc {
+    color: #5E6278;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.w-140px {
+    min-width: 140px;
+}
+@media(max-width: 1650px) {
+    code {
+        font-size: 14px;
+    }
+    code.fs-14px {
+        font-size: 13px !important;
+    }
+}
 
 @media(max-width: 1200px) {
     .customer-join__img {

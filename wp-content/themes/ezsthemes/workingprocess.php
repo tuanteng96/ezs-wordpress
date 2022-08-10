@@ -9,471 +9,819 @@ get_header();
 <div id="main">
     <div class="inner-wrap">
     </div>
-    <div id="function" class="pt-5">
-        <h1>Quy trình triển khai</h1>
-        <div class="function-nav procedure-nav">
-            <div id="function-nav">
-                <p class="active" to="tuvan-demo">TƯ VẤN - DEMO</p>
-                <p to="hopdong-thanhtoan">HỢP ĐỒNG - THANH TOÁN</p>
-                <p to="bangiao-huongdan">BÀN GIAO - HƯỚNG DẪN</p>
-                <p to="baohanh-hotro">BẢO HÀNH - HỖ TRỢ</p>
+    <div class="inner-wrap-title text-center">
+        <div class="container">
+            <div class="inner-wrap_content">
+                <h1>Quy trình triển khai</h1>
+                <div class="desc">Quy trình chuẩn triển khai cho khách hàng sử phần mềm quản lý SPA EZS</div>
             </div>
         </div>
-        <div class="container">
-            <div id="tuvan-demo">
-                <h3 title="tuvan-demo">I. TƯ VẤN - DEMO</h3>
-                <table class="table table-bordered table-default">
-                    <!-- <thead>
-                            <tr>
-                                <th scope="col">STT</th>
-                                <th scope="col">MÔ TẢ</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead> -->
-                    <tbody>
-
-                        <tr>
-                            <td scope="row">1.1</td>
-                            <td>Tư vấn trực tiếp qua điện thoại</td>
-                            <td>
-                                - Thế mạnh và điểm nổi bật của hệ thống <br>
-                                - Các giải pháp giúp khai thác hệ thống giúp tăng doanh thu, tìm kiếm khách hàng
-                                mới và chăm sóc khách hàng <br>
-                                - Báo giá và chương trình ưu đãi <br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1.2</td>
-                            <td>Gửi tài liệu chi tiết để khách hàng tham khảo thêm</td>
-                            <td>
-                                - Thông tin giải pháp <br>
-                                - Thông tin bảng giá <br>
-                                - Sản phẩm thực tế tham khảo
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1.3</td>
-                            <td>Demo trực tiếp toàn bộ hệ thống qua ZOOM</td>
-                            <td>
-                                - Trải nghiệm phần mềm quản lý <br>
-                                <div class="pl-30">
-                                    + Cài đặt spa ( nhân viên, sản phẩm, dịch vụ, khách hàng … ) <br>
-                                    + Vận hành hàng ngày ( check in, mua hàng, thanh toán, tích thẻ, tính hoa
-                                    hồng
-                                    .. ) <br>
-                                    + Trải nghiệm App nhân viên quản lý ( công, ca, lương thưởng, thao tác
-                                    nghiệp vụ
-                                    với ca được giao … ) <br>
-                                    + Trải nghiệm website ( kết nối liên thông đến phần mềm, đặt lịch, mua hàng
-                                    &
-                                    xem thông tin … ) <br>
-                                    + Trải nghiệm App khách hàng ( đăng nhập, quản lý, tương tác: mua hàng, đặt
-                                    lịch, livechat … ) <br>
-                                    + Trải nghiệm thiết bị hỗ trợ ( ký điện tử, đánh giá dịch vụ, quét QR thanh
-                                    toán
-                                    tự động, tạo thanh toán tự động … ) <br>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1.4</td>
-                            <td>Tư vấn, trả lời các khúc mắc đến từ phía khách hàng</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+        <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
+    </div>
+    <div class="fc-detail">
+        <div class="fc-detail-header">
+            <div class="container not-fix-container">
+                <div class="fc-tabs">
+                    <ul class="fc-tab">
+                        <li class="active" data-nav="demo">
+                            <span class="text-uppercase title"><span class="font-number">1.</span> Tư vấn & Demo</span>
+                            <span class="text-gray-500 desc">Thực hiện tư vấn</span>
+                        </li>
+                        <li data-nav="pay">
+                            <span class="text-uppercase title"><span class="font-number">2.</span> Hợp đồng & Thanh toán</span>
+                            <span class="text-gray-500 desc">Kí kết và thanh toán</span>
+                        </li>
+                        <li data-nav="guide">
+                            <span class="text-uppercase title"><span class="font-number">3.</span> Bàn giao & Hướng dẫn</span>
+                            <span class="text-gray-500 desc">Hướng dẫn sử dụng</span>
+                        </li>
+                        <li data-nav="support">
+                            <span class="text-uppercase title"><span class="font-number">4.</span> Bảo hành & Hỗ trợ</span>
+                            <span class="text-gray-500 desc">Update tính năng</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div id="hopdong-thanhtoan">
-                <h3 title="hopdong-thanhtoan">II. HỢP ĐỒNG - THANH TOÁN</h3>
-                <table class="table table-bordered table-default">
-                    <!-- <thead>
-                            <tr>
-                                <th scope="col">STT</th>
-                                <th scope="col">MÔ TẢ</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead> -->
-                    <tbody>
-                        <tr>
-                            <td scope="row">2.1</td>
-                            <td>Ký hợp đồng</td>
-                            <td>
-                                - Xin thông tin pháp nhân bên Spa <br>
-                                - Gửi hợp đồng bản mềm cho phía SPA check thông tin <a href="#">( Xem hợp đồng mẫu
-                                    )</a> <br>
-                                - Ký hợp đồng chính thức
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">2.2</td>
-                            <td>
-                                Tạm ứng & Thanh toán
-                            </td>
-                            <td>
-                                -Tạm ứng ngay sau khi ký hợp đồng: 50% phí khởi tạo và 100% các khoản phí duy
-                                trì <br>
-                                - Thanh toán nốt 50% phí khởi tạo khi EZS hướng dẫn sử dụng và bên Spa chính
-                                thức vận hành <br>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div id="bangiao-huongdan">
-                <h3 title="bangiao-huongdan">III. BÀN GIAO - HƯỚNG DẪN </h3>
-                <p class="table-desc">Bên A sẽ bàn giao và hướng dẫn sử dụng từng bước theo check list bên dưới cho phía Spa
-                    Sẽ thực hiện thao tác từng nghiệp vụ 1 – Xong hạng mục nào mới pass qua hạng mục tiếp theo nhằm đảm bảo phía nhân viên SPA thực hiện ĐÚNG và hiểu rõ từng thao tác nghiệp vụ
-                </p>
-                <table class="table table-bordered table-default">
-                    <!-- <thead>
-                            <tr>
-                                <th scope="col">STT</th>
-                                <th scope="col">MÔ TẢ</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead> -->
-                    <tbody>
-                        <tr>
-                            <td colspan="4" class="text-center" class="a">3.1 Thiết bị </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.1.1</td>
-                            <td>Máy tính kết nối mạng</td>
-                            <td>Đặt icon truy cập nhanh ra màn hình</td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.1.2</td>
-                            <td>Máy in hóa đơn</td>
-                            <td>Xác định khổ giấy in và cấu hình vào phần mềm
-                                In test 1 hóa đơn</td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.1.3</td>
-                            <td>
-                                Máy tính bảng Samsung, bút ký + giá đỡ <br>
-                                Link máy tính bảng <br>
-                                Link bút ký <br>
-                                Link giá đỡ máy tính bảng
-                            </td>
-                            <td>
-                                Đặt icon truy cập nhanh (ipad/danh-gia) ra màn hình <br>
-                                Tắt chế độ tự tắt màn hình của máy tính bảng sau bao giây <br>
-                                Cài đặt TVC quảng cáo <br>
-                                Test quét mã QR code cho 2 dòng máy android và IOS <br>
-                                Hướng dẫn cách mở ứng dụng
-                            </td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.1.4</td>
-                            <td>Điện thoại Android <br>
-                                1 Sim điện thoại</td>
-                            <td>
-                                Cài đặt ứng dụng thanh toán tự động <br>
-                                Mở thông báo biến động các số tài khoản nhận thanh toán vào SIM mới <br>
-                                Test tạo thanh toán tự động – duyệt thanh toán tự động
-                            </td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.1.5</td>
-                            <td>Máy đọc thẻ từ ( trường hợp KH có sử dụng thẻ từ cứng cung cấp cho khách hàng )</td>
-                            <td></td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.1.6</td>
-                            <td>Máy đọc mã vạch ( Trường hợp KH bán mỹ phẩm và quản lý sản phẩm bằng mã vạch sản
-                                phẩm )</td>
-                            <td></td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="text-center" class="a">3.2 Cài đặt </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.2.1</td>
-                            <td>SETUP nhân viên</td>
-                            <td>
-                                Danh sách nhân viên <br>
-                                Chính sách: Lương, phụ cấp, ngày công, ngày nghỉ <br>
-                                Cài đặt APP nhân viên và đăng nhập cho các bạn <br>
-                            </td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.2.2</td>
-                            <td>SETUP Tính Doanh số và thưởng hoa hồng khi bán</td>
-                            <td>Cơ chế thưởng % khi tư vấn thành công: Tính trên deal chốt hay số tiền thanh toán
-                                của deal chốt đó
-                                Cơ chế tính doanh số</td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.2.3</td>
-                            <td>
-                                NHóm khách hàng ( cấp bậc khách hàng )
-                            </td>
-                            <td>
-                                Cài đặt danh sách các cấp bậc khách hàng – quyền lợi của cấp bậc – Điều kiện đạt
-                                cấp – Có bị hạ cấp không ?
-                                Quyền lợi của từng nhóm khách hàng
-                            </td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.2.4</td>
-                            <td>Danh sách sản phẩm</td>
-                            <td>
-                                Phân loại nhãn hàng <br>
-                                Phân loại sản phẩm <br>
-                                Danh sách chi tiết từng sản phẩm – Hoa hồng khi tư vấn bán được
-                            </td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.2.5</td>
-                            <td>Danh sách dịch vụ</td>
-                            <td>Phân loại <br>
-                                Danh sách chi tiết từng dịch vụ - Lương Kỹ thuật viên – Hoa hồng khi tư vấn bán được
-                                <br>
-                                Lưu ý: Setup bảo hành & Phác đồ & Tự động đặt lịch
-                            </td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.2.6</td>
-                            <td>Danh sách các thẻ tiền</td>
-                            <td>Danh sách chi tiết từng thẻ tiền ( giá bán, số tiền được chi tiêu ... )</td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.2.7</td>
-                            <td>Danh sách Nguyên Vật liệu</td>
-                            <td>Phân loại sản phẩm <br>
-                                Danh sách chi tiết từng nguyên vật liệu <br>
-                                Cấu hình khấu hao cho từng dịch vụ</td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.2.8</td>
-                            <td>Toàn bộ DS khách hàng cũ</td>
-                            <td></td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.2.9</td>
-                            <td>Cài đặt chăm sóc tự động cho dịch vụ</td>
-                            <td></td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.2.10</td>
-                            <td>Cài đặt nội dung tự động</td>
-                            <td>Chúc mừng sinh nhật ( ngày / tháng ) <br>
-                                Chúc mừng lên cấp <br>
-                                Nhắc lịch trước 1 ngày và trước 1 giờ</td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.2.10</td>
-                            <td>Cài đặt khuyến mại</td>
-                            <td>- Giảm giá <br>
-                                - Tặng buổi <br>
-                                - Voucher Giảm % / voucher tiền mặt <br>
-                                - Chương trình hoàn tiền <br>
-                                - Chương trình hoa hồng dành cho người giới thiệu <br>
-                                - Ưu đãi sinh nhật ngày / tháng <br>
-                                - Ưu đãi khi đăng ký hoặc đăng nhập lần đầu</td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="text-center" class="a">3.3 Vận hành </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.3.1</td>
-                            <td>KHO</td>
-                            <td>Nhập kho <br>
-                                Xuất kho <br>
-                                Chuyển đổi từ sản phẩm sang NVL</td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.3.2</td>
-                            <td>Kế toán & HCNS</td>
-                            <td>Nhập thu / chi ( không bao gồm bán hàng ) <br>
-                                Tạo thưởng / phạt <br>
-                                Tạm ứng / Hoàn ứng <br>
-                                Chấm công nhân viên <br>
-                                Bảng lương – Trả lương <br>
-                                Tạo thu / chi nội bộ ( đưa tiền cho Sếp )</td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.3.3</td>
-                            <td>
-                                POS KHÁCH HÀNG
-                            </td>
-                            <td>
-                                - Tìm kiếm khách hàng <br>
-                                - Đọc thông tin tổng quan bên ngoài <br>
-                                - Chi tiết<br>
-                                + Chỉnh sửa thông tin – Reset mật khẩu – Bật mã QR code giúp khách login nhanh<br>
-                                + Check in – check out<br>
-                                + KHối đặt lich trong ngày của khách<br>
-                                + Khối thẻ dịch vụ của khách<br>
-                                + Khối đơn hàng trong ngày của khách – Thanh toán – in hóa đơn – Thưởng / DS<br>
-                                + Các menu chính của 1 khách hàng<br>
-                                - Mua sản phẩm / dịch vụ<br>
-                                - Quản lý thẻ dịch vụ và các nghiệp vụ thẻ<br>
-                                - Đặt lịch cho khách hàng ( khi khách gọi điện hoặc liên hệ trực tiếp qua kênh )<br>
-                                - Quản lý ví & thẻ tiền của khách hàng<br>
-                                - Quản lý đơn hàng – trả hàng – Thanh toán nợ - Thưởng / Ds cho khoản thanh toán
-                                nợ<br>
-                                - Quản lý Nhật ký & CSKH<br>
-                                - Tạo thẻ cũ<br>
-                                - Quản lý đặt lịch chung<br>
-                                - Danh sách công việc cần xử lý<br>
-                                - Khách đặt lịch trực tuyến từ web / app<br>
-                                - Khách đặt mua sản phẩm trực tuyến<br>
-                                - Duyệt lại các khoản thanh toán tự động<br>
-                                - Lịch nhắc cần xử lý<br>
-                                - Liên hệ từ web / App<br>
-                                - Quy trình cơ bản từ lúc khách Check in - Check out – ký xác nhận và đánh giá dịch
-                                vụ
-                            </td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.3.4</td>
-                            <td>Xử lý sự cố</td>
-                            <td>
-                                - Tích ca sai cho kỹ thuật viên <br>
-                                - Đơn hàng bán sai trong ngày / qua ngày <br>
-                                - Tạo thưởng hoa hồng, add doanh số bị sai <br>
-                                - Khác: Khi phát sinh sẽ hướng dẫn
-                            </td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.3.5</td>
-                            <td>Nhân viên sử dụng APP</td>
-                            <td>Thống kê hoa hồng, lương ca dịch vụ <br>
-                                Xem thông tin chi tiết ca được giao - tạo ghi chú – chụp ảnh thực tế</td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.3.6</td>
-                            <td>Gửi tin nhắn</td>
-                            <td>- Đến APP <br>
-                                - Đến trình duyệt</td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.3.7</td>
-                            <td>Xem báo cáo</td>
-                            <td></td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="text-center" class="a">3.4 Web - App </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.4.1</td>
-                            <td>Web</td>
-                            <td>Hình ảnh & Nội dung sản phẩm và dịch vụ</td>
-                            <td>Hình ảnh sản phẩm: 600x600 <br>
-                                Hình ảnh dịch vụ: 500x300; Các option lựa chọn ( 1 buổi, 3 buổi: 600x600 ) <br>
-                                Thông tin mô tả <br>
-                                Thông tin chi tiết về sản phẩm và dịch vụ</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3.4.2</td>
-                            <td>APP</td>
-                            <td>A. Nội dung <br>
-                                Nội dung Trang chủ App <br>
-                                - 3 Banner Top: 600 x chiều dài tùy ý ( chương trình ưu đãi, dịch vụ hot & sự kiện
-                                quan trọng ) <br>
-                                - 8 Quick link theo nhu cầu <br>
-                                - Banner main: 1 hoặc nhiều banner: 600 x dài tùy ý <br>
-
-                                Nội dung trang Blogs tư vấn làm đẹp <br>
-                                Nội dung trang mua hàng <br>
-                                - Chọn kiểu hiển thị <br>
-                                - Banner: Hôm nay sale gì <br>
-                                - Các banner bên dưới <br>
-
-
-
-                                B. Mô tả cơ chế hoạt động khi khách chưa đăng nhập<br>
-                                - Xem thông tin ưu đãi, blogs, sản phẩm dịch vụ<br>
-                                - Đăng ký tài khoản<br>
-                                - Chọn cơ sở tương tác ( chung cho cả đăng nhập )<br>
-
-
-                                C. Mô tả cơ chế hoạt động khi khách đăng nhập<br>
-                                - Đăng nhập bằng tài khoản: điện thoại + mật khẩu<br>
-                                - Quét QR code<br>
-                                - Quên mật khẩu<br>
-                                - Đặt lịch trực tuyến<br>
-                                - Mua hàng online<br>
-                                - Xem các thông báo<br>
-                                - Quản lý tài khoản</td>
-                            <td>video hướng dẫn</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-            <div id="baohanh-hotro">
-                <h3 title="baohanh-hotro">IV. BẢO HÀNH - HỖ TRỢ</h3>
-                <table class="table table-bordered table-default">
-                    <!-- <thead>
-                            <tr>
-                                <th scope="col">STT</th>
-                                <th scope="col">MÔ TẢ</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead> -->
-                    <tbody>
-                        <tr>
-                            <td scope="row">4.1</td>
-                            <td>Hỗ trợ sau bán hàng </td>
-                            <td>
-                                - Tạo nhóm riêng cho SPA & các nhân viên EZS để trao đổi support <br>
-                                - Hỗ trợ trực tuyến thông qua Zoom hoặc công cụ ultraview, teamview <br>
-                                - Hỗ trợ đào tạo lại nhân viên spa trong trường hợp Spa có thay đổi nhân sự
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">4.2</td>
-                            <td>
-                                Bảo hành
-                            </td>
-                            <td>
-                                - Tất cả các lỗi phát sinh trong quá trình sử dụng được bên Spa thông báo sẽ được
-                                khắc phục ngay lập tức trong vòng 4 giờ <br>
-                                - Những vấn đề đến từ bên thứ 3 ( Tên miền, Trung tâm dữ liệu và Apple, CHPLAY … )
-                                sẽ được xử lý theo quy trình do bên thứ 3 quy định ( Một số trường hợp có thể phát
-                                sinh chi phí )
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">4.3</td>
-                            <td>
-                                Nâng cấp
-                            </td>
-                            <td>
-                                - Khách hàng sẽ được nâng cấp theo tiến trình nâng cấp chung của công ty cho toàn bộ
-                                giải pháp mà không mất thêm chi phí
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        </div>
+        <div class="fc-detail-wrap">
+            <div class="container not-fix-container">
+                <div class="fc-detail-main">
+                    <div class="fc-tab-content" data-tab="demo">
+                        <div class="fc-content">
+                            <table class="table table-striped table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th class="fs-4 fw-bold text-dark ps-6 py-6" colspan="2">
+                                            Tư vấn & Demo
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>Tư vấn trực tiếp qua điện thoại</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    Thế mạnh và điểm nổi bật của hệ thống
+                                                </li>
+                                                <li>
+                                                    Các giải pháp giúp khai thác hệ thống giúp tăng doanh thu, tìm kiếm khách hàng mới và chăm sóc khách hàng
+                                                </li>
+                                                <li>
+                                                    Báo giá và chương trình ưu đãi
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Gửi tài liệu chi tiết để khách hàng tham khảo thêm</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    Thông tin giải pháp
+                                                </li>
+                                                <li>
+                                                    Thông tin bảng giá
+                                                </li>
+                                                <li>
+                                                    Sản phẩm thực tế tham khảo
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Demo trực tiếp toàn bộ hệ thống qua ZOOM</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    Trải nghiệm phần mềm quản lý
+                                                    <ol>
+                                                        <li>
+                                                            Cài đặt spa ( nhân viên, sản phẩm, dịch vụ, khách hàng … )
+                                                        </li>
+                                                        <li>
+                                                            Vận hành hàng ngày ( check in, mua hàng, thanh toán, tích thẻ, tính hoa hồng .. )
+                                                        </li>
+                                                        <li>
+                                                            Trải nghiệm App nhân viên quản lý ( công, ca, lương thưởng, thao tác nghiệp vụ với ca được giao … )
+                                                        </li>
+                                                        <li>
+                                                            Trải nghiệm website ( kết nối liên thông đến phần mềm, đặt lịch, mua hàng & xem thông tin … )
+                                                        </li>
+                                                        <li>
+                                                            Trải nghiệm App khách hàng ( đăng nhập, quản lý, tương tác: mua hàng, đặt lịch, livechat … )
+                                                        </li>
+                                                        <li>
+                                                            Trải nghiệm thiết bị hỗ trợ ( ký điện tử, đánh giá dịch vụ, quét QR thanh toán tự động, tạo thanh toán tự động … )
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Tư vấn, trả lời các khúc mắc đến từ phía khách hàng</code>
+                                        </td>
+                                        <td>
+                                            Giải đáp các thắc mắc cũng như nhu cầu của khách hàng
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="fc-tab-content" data-tab="pay">
+                        <div class="fc-content">
+                            <table class="table table-striped table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th class="fs-4 fw-bold text-dark ps-6 py-6" colspan="2">
+                                            Hợp đồng & Thanh toán
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>Ký hợp đồng</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    Xin thông tin pháp nhân bên Spa
+                                                </li>
+                                                <li>
+                                                    Gửi hợp đồng bản mềm cho phía SPA check thông tin <a href="">( Xem hợp đồng mẫu )</a>
+                                                </li>
+                                                <li>
+                                                    Ký hợp đồng chính thức
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Tạm ứng & Thanh toán</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    Tạm ứng ngay sau khi ký hợp đồng <code class="fs-14px">50% phí khởi tạo và 100% các khoản phí duy trì</code>
+                                                </li>
+                                                <li>
+                                                    Thanh toán nốt <code class="fs-14px">50% phí khởi tạo</code> khi EZS hướng dẫn sử dụng và bên Spa chính thức vận hành
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="fc-tab-content" data-tab="guide">
+                        <div class="fc-desc">
+                            Bên A sẽ <code class="fs-14px">bàn giao</code> và <code class="fs-14px">hướng dẫn sử dụng</code> từng bước theo check list bên dưới cho phía Spa Sẽ thực hiện thao tác từng nghiệp vụ 1 – <code class="fs-14px">Xong hạng mục nào mới pass qua hạng mục tiếp theo</code> nhằm đảm bảo phía nhân viên SPA <code class="fs-14px">thực hiện ĐÚNG và hiểu rõ</code> từng thao tác nghiệp vụ
+                        </div>
+                        <div class="fc-content">
+                            <table class="table table-striped table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th class="fs-4 fw-bold text-dark ps-6 py-6" colspan="2">
+                                            Thiết bị
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>Máy tính kết nối mạng</code>
+                                        </td>
+                                        <td>
+                                            Đặt icon truy cập nhanh ra màn hình
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Máy in hóa đơn</code>
+                                        </td>
+                                        <td>
+                                            Xác định khổ giấy in và cấu hình vào phần mềm In test 1 hóa đơn
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Máy tính bảng Samsung, bút ký + giá đỡ</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Đặt icon truy cập nhanh <code class="fs-14px">/ipad/danh-gia</code> ra màn hình</li>
+                                                <li>Tắt chế độ tự tắt màn hình của máy tính bảng sau bao giây</li>
+                                                <li>Cài đặt <code class="fs-14px">TVC</code> quảng cáo</li>
+                                                <li>Test quét mã QR Code cho 2 dòng máy Android và IOS</li>
+                                                <li>Hướng dẫn cách mở ứng dụng</li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Điện thoại Android</code>
+                                            <div class="sub-title">
+                                                1 Sim điện thoại
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Cài đặt ứng dụng thanh toán tự động</li>
+                                                <li>Mở thông báo <code class="fs-14px">biến động các số tài khoản</code> nhận thanh toán vào SIM mới</li>
+                                                <li>Cài đặt <code class="fs-14px">TVC</code> quảng cáo</li>
+                                                <li>Test tạo thanh toán tự động – Duyệt thanh toán tự động</li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Máy đọc thẻ từ</code>
+                                            <div class="sub-title">
+                                                Trường hợp Khách hàng có sử dụng thẻ từ cứng cung cấp cho khách hàng
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Máy đọc mã vạch</code>
+                                            <div class="sub-title">
+                                                Trường hợp khách hàng bán mỹ phẩm và Quản lý sản phẩm bằng mã vạch sản phẩm
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <!-- ===================== -->
+                                <thead>
+                                    <tr class="border-top-tb">
+                                        <th class="fs-4 fw-bold text-dark ps-6 py-6" colspan="2">
+                                            Cài đặt
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>SETUP nhân viên</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    Danh sách nhân viên
+                                                </li>
+                                                <li>
+                                                    Chính sách <code class="fs-14px">Lương, phụ cấp, ngày công, ngày nghỉ</code>
+                                                </li>
+                                                <li>
+                                                    Cài đặt APP nhân viên và đăng nhập cho các bạn
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>SETUP Tính Doanh số và Thưởng hoa hồng khi bán</code>
+                                        </td>
+                                        <td>
+                                            Cơ chế thưởng % khi tư vấn thành công <code class="fs-14px">Tính trên deal chốt hay số tiền thanh toán của deal chốt đó Cơ chế tính doanh số</code>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Nhóm khách hàng ( cấp bậc khách hàng )</code>
+                                        </td>
+                                        <td>
+                                            Cài đặt danh sách các cấp bậc khách hàng – quyền lợi của cấp bậc – Điều kiện đạt cấp – Có bị hạ cấp không ? Quyền lợi của từng nhóm khách hàng
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Danh sách sản phẩm</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Phân loại nhãn hàng</li>
+                                                <li>Phân loại sản phẩm</li>
+                                                <li>Danh sách chi tiết từng sản phẩm – Hoa hồng khi tư vấn bán được</li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Danh sách dịch vụ</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Phân loại</li>
+                                                <li>
+                                                    Danh sách chi tiết từng dịch vụ - Lương Kỹ thuật viên – Hoa hồng khi tư vấn bán được
+                                                </li>
+                                            </ul>
+                                            Lưu ý <code class="fs-14px">Setup bảo hành & Phác đồ & Tự động đặt lịch </code>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Danh sách các thẻ tiền</code>
+                                        </td>
+                                        <td>Danh sách chi tiết từng thẻ tiền ( giá bán, số tiền được chi tiêu ... )</td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Danh sách Nguyên Vật liệu</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    Phân loại sản phẩm
+                                                </li>
+                                                <li>
+                                                    Danh sách chi tiết từng nguyên vật liệu
+                                                </li>
+                                                <li>
+                                                    Cấu hình khấu hao cho từng dịch vụ
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Toàn bộ danh sách khách hàng cũ</code>
+                                        </td>
+                                        <td></td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Cài đặt chăm sóc tự động cho dịch vụ</code>
+                                        </td>
+                                        <td></td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Cài đặt nội dung tự động</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    Chúc mừng sinh nhật <code class="fs-14px">( ngày / tháng )</code>
+                                                </li>
+                                                <li>
+                                                    Chúc mừng lên cấp
+                                                </li>
+                                                <li>
+                                                    Nhắc lịch trước 1 ngày và trước 1 giờ
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Cài đặt khuyến mại</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    Giảm giá
+                                                </li>
+                                                <li>
+                                                    Tặng buổi
+                                                </li>
+                                                <li>
+                                                    Voucher Giảm % / Voucher tiền mặt
+                                                </li>
+                                                <li>
+                                                    Chương trình hoàn tiền
+                                                </li>
+                                                <li>
+                                                    Chương trình hoa hồng dành cho người giới thiệu
+                                                </li>
+                                                <li>
+                                                    Ưu đãi sinh nhật ngày / tháng
+                                                </li>
+                                                <li>
+                                                    Ưu đãi khi đăng ký hoặc đăng nhập lần đầu
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <!-- ===================== -->
+                                <thead>
+                                    <tr>
+                                        <th class="fs-4 fw-bold text-dark ps-6 py-6" colspan="2">
+                                            Vận hành
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>Kho</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    Nhập kho
+                                                </li>
+                                                <li>
+                                                    Xuất kho
+                                                </li>
+                                                <li>
+                                                    Chuyển đổi từ sản phẩm sang nguyên vật liệu
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Kế toán và HCNS</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Nhập thu / chi <code class="fs-14px">không bao gồm bán hàng</code></li>
+                                                <li>Tạo thưởng / phạt</li>
+                                                <li>Tạm ứng / Hoàn ứng</li>
+                                                <li>Chấm công nhân viên</li>
+                                                <li>Bảng lương – Trả lương</li>
+                                                <li>Tạo thu / Chi nội bộ <code class="fs-14px">đưa tiền cho Sếp</code></li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Pos khách hàng</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                    Tìm kiếm khách hàng
+                                                </li>
+                                                <li>
+                                                    Đọc thông tin tổng quan bên ngoài
+                                                </li>
+                                                <li>
+                                                    Chi tiết
+                                                    <ol>
+                                                        <li>
+                                                            Chỉnh sửa thông tin – Reset mật khẩu – Bật mã QR code giúp khách login nhanh
+                                                        </li>
+                                                        <li>
+                                                            Check in – Check out
+                                                        </li>
+                                                        <li>
+                                                            Khối đặt lich trong ngày của khách
+                                                        </li>
+                                                        <li>
+                                                            Khối thẻ dịch vụ của khách
+                                                        </li>
+                                                        <li>
+                                                            Khối đơn hàng trong ngày của khách – Thanh toán – In hóa đơn – Thưởng / Danh sasch
+                                                        </li>
+                                                        <li>Các menu chính của 1 khách hàng</li>
+                                                    </ol>
+                                                </li>
+                                                <li>
+                                                    Mua sản phẩm / dịch vụ
+                                                </li>
+                                                <li>
+                                                    Quản lý thẻ dịch vụ và các nghiệp vụ thẻ
+                                                </li>
+                                                <li>Đặt lịch cho khách hàng <code class="fs-14px">khi khách gọi điện hoặc liên hệ trực tiếp qua kênh</code></li>
+                                                <li>
+                                                    Quản lý ví & thẻ tiền của khách hàng
+                                                </li>
+                                                <li>
+                                                    Quản lý đơn hàng – Trả hàng – Thanh toán nợ - Thưởng / Danh sách cho khoản thanh toán nợ
+                                                </li>
+                                                <li>
+                                                    Quản lý Nhật ký & CSKH
+                                                </li>
+                                                <li>
+                                                    Tạo thẻ cũ
+                                                </li>
+                                                <li>
+                                                    Quản lý đặt lịch chung
+                                                </li>
+                                                <li>
+                                                    Danh sách công việc cần xử lý
+                                                </li>
+                                                <li>
+                                                    Khách đặt lịch trực tuyến từ web / app
+                                                </li>
+                                                <li>
+                                                    Khách đặt mua sản phẩm trực tuyến
+                                                </li>
+                                                <li>
+                                                    Duyệt lại các khoản thanh toán tự động
+                                                </li>
+                                                <li>
+                                                    Lịch nhắc cần xử lý
+                                                </li>
+                                                <li>
+                                                    Liên hệ từ web / App
+                                                </li>
+                                                <li>
+                                                    Quy trình cơ bản từ lúc khách Check in - Check out – Ký xác nhận và đánh giá dịch vụ
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Xử lý sự cố</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Tích ca sai cho kỹ thuật viên</li>
+                                                <li>Đơn hàng bán sai trong ngày / qua ngày</li>
+                                                <li>Tạo thưởng hoa hồng, add doanh số bị sai</li>
+                                                <li>Khác <code class="fs-14px">Khi phát sinh sẽ hướng dẫn</code></li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Nhân viên sử dụng APP</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Thống kê hoa hồng, lương ca dịch vụ</li>
+                                                <li>
+                                                    Xem thông tin chi tiết ca được giao - tạo ghi chú – chụp ảnh thực tế
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Gửi tin nhắn</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>Đến APP</li>
+                                                <li>Đến trình duyệt</li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Xem báo cáo</code>
+                                        </td>
+                                        <td>
+                                            Xem thống kê SPA
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <!-- ===================== -->
+                                <thead>
+                                    <tr>
+                                        <th class="fs-4 fw-bold text-dark ps-6 py-6" colspan="2">
+                                            Website & APP
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>Web</code>
+                                        </td>
+                                        <td>
+                                            <div>Hình ảnh & Nội dung sản phẩm và dịch vụ</div>
+                                            <div>Hình ảnh sản phẩm <code class="fs-14px">600x600</code></div>
+                                            <div>Hình ảnh dịch vụ <code class="fs-14px">600x600</code></div>
+                                            <div>Các Option lựa chọn ( 1 buổi, 3 buổi ) <code class="fs-14px">600x600</code></div>
+                                        </td>
+                                        <td class="w-140px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>APP</code>
+                                        </td>
+                                        <td>
+                                            <code class="mb-2 d-inline-block fs-14px">1. Nội dung</code>
+                                            <ul>
+                                                <li>
+                                                    Nội dung Trang chủ App
+                                                    <ol>
+                                                        <li>
+                                                            3 Banner Top <code class="fs-14px">600 x chiều dài tùy ý</code> ( chương trình ưu đãi, dịch vụ hot & sự kiện quan trọng )
+                                                        </li>
+                                                        <li>
+                                                            8 Quick Link theo nhu cầu
+                                                        </li>
+                                                        <li>
+                                                            Banner Main 1 hoặc nhiều Banner <code class="fs-14px">600 x dài tùy ý</code>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                                <li>
+                                                    Nội dung trang Blogs tư vấn làm đẹp
+                                                </li>
+                                                <li>
+                                                    Nội dung trang mua hàng
+                                                    <ol>
+                                                        <li>
+                                                            Chọn kiểu hiển thị
+                                                        </li>
+                                                        <li>
+                                                            Banner <code class="fs-14px">Hôm nay sale gì ?</code>
+                                                        </li>
+                                                        <li>Các banner bên dưới</li>
+                                                    </ol>
+                                                </li>
+                                            </ul>
+                                            <code class="my-2 d-inline-block fs-14px">2. Mô tả cơ chế hoạt động khi khách chưa đăng nhập</code>
+                                            <ul>
+                                                <li>
+                                                    Xem thông tin ưu đãi, blogs, sản phẩm dịch vụ
+                                                </li>
+                                                <li>
+                                                    Đăng ký tài khoản
+                                                </li>
+                                                <li>
+                                                    Chọn cơ sở tương tác ( chung cho cả đăng nhập )
+                                                </li>
+                                            </ul>
+                                            <code class="my-2 d-inline-block fs-14px">3. Mô tả cơ chế hoạt động khi khách đăng nhập</code>
+                                            <ul>
+                                                <li>
+                                                    Đăng nhập bằng tài khoản <code class="fs-14px">Điện thoại & Mật khẩu</code>
+                                                </li>
+                                                <li>
+                                                    Quét QR Code
+                                                </li>
+                                                <li>
+                                                    Quên mật khẩu
+                                                </li>
+                                                <li>
+                                                    Đặt lịch trực tuyến
+                                                </li>
+                                                <li>
+                                                    Mua hàng online
+                                                </li>
+                                                <li>
+                                                    Xem các thông báo
+                                                </li>
+                                                <li>
+                                                    Quản lý tài khoản
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="w-140px">
+                                            <code class="cursor-pointer">Xem Video</code>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="fc-tab-content" data-tab="support">
+                        <div class="fc-content">
+                            <table class="table table-striped table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th class="fs-4 fw-bold text-dark ps-6 py-6" colspan="2">
+                                            Bảo hành & Hỗ trợ
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>Hỗ trợ sau bán hàng</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                Tạo nhóm riêng cho SPA & các nhân viên EZS để <code class="fs-14px">trao đổi Support</code>
+                                                </li>
+                                                <li>
+                                                Hỗ trợ trực tuyến thông qua <code class="fs-14px">Zoom</code> hoặc công cụ <code class="fs-14px">Ultraviewer, Teamviewer</code>
+                                                </li>
+                                                <li>
+                                                Hỗ trợ đào tạo lại nhân viên spa trong trường hợp Spa có thay đổi nhân sự
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Bảo hành</code>
+                                        </td>
+                                        <td>
+                                            <ul>
+                                                <li>
+                                                Tất cả các lỗi phát sinh trong quá trình sử dụng được bên Spa thông báo sẽ được khắc phục ngay lập tức <code class="fs-14px">trong vòng 4 giờ</code>
+                                                </li>
+                                                <li>
+                                                Những vấn đề đến từ bên thứ 3 ( <code class="fs-14px">Tên miền, Trung tâm dữ liệu và Apple, CHPLAY …</code> ) sẽ được xử lý theo quy trình do bên thứ 3 quy định <code class="fs-14px">Một số trường hợp có thể phát sinh chi phí</code>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>Nâng cấp</code>
+                                        </td>
+                                        <td>
+                                        Khách hàng sẽ được nâng cấp theo tiến trình nâng cấp chung của công ty cho toàn bộ giải pháp mà <code class="fs-14px">không mất thêm chi phí</code>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</div>
+<div class="footer-pattern-hidden bg-main">
+    <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-5.png" alt="logo">
 </div>
 <?php get_footer();

@@ -399,5 +399,9 @@ var EzsFC = {
             $(`[data-tab]`).removeClass("active");
             $(`[data-tab="${tabCurrent}"]`).addClass("active");
         }
+        else {
+            $(`[data-nav]`).first().addClass("active");
+            $(`[data-tab]`).first().addClass("active");
+        }
     }
 }
