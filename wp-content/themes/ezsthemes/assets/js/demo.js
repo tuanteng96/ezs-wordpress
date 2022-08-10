@@ -1,6 +1,7 @@
 $(document).ready(function() {
     // Price Change ====================
     EzsChangePrice.init()
+    EzsFC.init()
         // ====================
         // $('.menu-mobi__icon-arrow').click(function () {
         //     var t = $(this)
@@ -359,4 +360,44 @@ var EzsChangePrice = {
             return price.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.')
         }
     },
+}
+
+var EzsFC = {
+    init: () => {
+        EzsFC.changeHref();
+        $(`[data-nav]`).click(function() {
+            const navName = $(this).data('nav');
+            EzsFC.changeHref(navName)
+        })
+    },
+    removeParam: (key, sourceURL) => {
+        var rtn = sourceURL.split("?")[0],
+            param,
+            params_arr = [],
+            queryString = (sourceURL.indexOf("?") !== -1) ? sourceURL.split("?")[1] : "";
+        if (queryString !== "") {
+            params_arr = queryString.split("&");
+            for (var i = params_arr.length - 1; i >= 0; i -= 1) {
+                param = params_arr[i].split("=")[0];
+                if (param === key) {
+                    params_arr.splice(i, 1);
+                }
+            }
+            if (params_arr.length) rtn = rtn + "?" + params_arr.join("&");
+        }
+        return rtn;
+    },
+    getParamUrl: (key, sourceURL) => {
+        var url = new URL(sourceURL);
+        return url.searchParams.get(key);
+    },
+    changeHref: (tab) => {
+        const tabCurrent = tab || EzsFC.getParamUrl("tab", window.location.href);
+        if (tabCurrent) {
+            $(`[data-nav]`).removeClass("active");
+            $(`[data-nav="${tabCurrent}"]`).addClass("active");
+            $(`[data-tab]`).removeClass("active");
+            $(`[data-tab="${tabCurrent}"]`).addClass("active");
+        }
+    }
 }
