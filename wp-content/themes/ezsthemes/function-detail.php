@@ -18,7 +18,7 @@ get_header();
         </div>
         <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
     </div>
-    <div class="fc-detail">
+    <div class="fc-detail" id="scrollIntoView">
         <div class="fc-detail-header">
             <div class="container not-fix-container">
                 <div class="fc-tabs">

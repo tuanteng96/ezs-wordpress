@@ -1,15 +1,16 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Price Change ====================
     EzsChangePrice.init()
     EzsFC.init()
-        // ====================
-        // $('.menu-mobi__icon-arrow').click(function () {
-        //     var t = $(this)
-        //     t.parent().next('ul').slideToggle()
-        //     t.find('i').toggleClass('fa-plus fa-minus')
-        //     t.parents('li').siblings().find('ul').slideUp()
-        //     t.parents('li').siblings().find('i').removeClass(' fa-minus').addClass('fa-plus')
-        // })
+    EzsListCustomer.init()
+    // ====================
+    // $('.menu-mobi__icon-arrow').click(function () {
+    //     var t = $(this)
+    //     t.parent().next('ul').slideToggle()
+    //     t.find('i').toggleClass('fa-plus fa-minus')
+    //     t.parents('li').siblings().find('ul').slideUp()
+    //     t.parents('li').siblings().find('i').removeClass(' fa-minus').addClass('fa-plus')
+    // })
 
     $('.-blog-main, .-blog-sidebar').theiaStickySidebar({
         // Settings
@@ -22,7 +23,7 @@ $(document).ready(function() {
             scrollTop: $(url).offset().top
         }, 1000)
     }
-    $('.menu-mobi__nav-item').click(function() {
+    $('.menu-mobi__nav-item').click(function () {
         var t = $(this)
         if (t.find('.menu-mobi__icon-arrow').length == 1) {
             t.find('ul').slideToggle()
@@ -56,61 +57,85 @@ $(document).ready(function() {
         return i;
     }
     window.scrollY >= 750 ? $(".header-fixed").addClass("show") : $(".header-fixed").removeClass("show"),
-        $(".header-top__tool-search").click(function() {
+        $(".header-top__tool-search").click(function () {
             $(".box-search").addClass("show");
         }),
-        $(".header-fixed__tool-search").click(function() {
+        $(".header-fixed__tool-search").click(function () {
             $(".box-search").addClass("show");
         }),
-        $(".box-search__close svg").click(function() {
+        $(".box-search__close svg").click(function () {
             $(".box-search").removeClass("show");
         }),
         $(".arrow-active-move").on({
-            mouseenter: function() {
+            mouseenter: function () {
                 $(this).removeClass("arrow-active-move-out");
             },
-            mouseleave: function() {
+            mouseleave: function () {
                 $(this).addClass("arrow-active-move-out");
             },
         }),
-        $(".nav-menu").click(function() {
+        $(".nav-menu").click(function () {
             $(this).toggleClass("active"), $(".menu-mobi").slideToggle(400);
             $('body').toggleClass('overflow-hidden')
         }),
         $(".header-top__menu-detail > ul > li ").hover(
-            function() {
+            function () {
                 var e = $(".header-top__menu-detail > ul > li").index(this);
-                $(this).find("span").addClass("active"), $(this).siblings().find("span").removeClass("active"), $(".menu-background-move").css({ width: $(this).width(), left: a(e - 1) });
+                $(this).find("span").addClass("active"), $(this).siblings().find("span").removeClass("active"), $(".menu-background-move").css({
+                    width: $(this).width(),
+                    left: a(e - 1)
+                });
             },
-            function() {
-                $(".menu-background-move").css({ width: 0, left: 0 }), $(this).find("span").removeClass("active");
+            function () {
+                $(".menu-background-move").css({
+                    width: 0,
+                    left: 0
+                }), $(this).find("span").removeClass("active");
             }
         ),
         $(".header-fixed__menu-detail > ul > li ").hover(
-            function() {
+            function () {
                 var e = $(".header-fixed__menu-detail > ul > li").index(this);
-                $(this).find("span").addClass("active"), $(this).siblings().find("span").removeClass("active"), $(".menu-fixed-background-move").css({ width: $(this).width(), left: i(e - 1) });
+                $(this).find("span").addClass("active"), $(this).siblings().find("span").removeClass("active"), $(".menu-fixed-background-move").css({
+                    width: $(this).width(),
+                    left: i(e - 1)
+                });
             },
-            function() {
-                $(".menu-fixed-background-move").css({ width: 0, left: 0 });
+            function () {
+                $(".menu-fixed-background-move").css({
+                    width: 0,
+                    left: 0
+                });
             }
         ),
         $(".header-search-index").hover(
-            function() {
+            function () {
                 var e = $(".header-search-index").index(this);
-                $(".search-background-move").css({ width: $(this).outerWidth(), left: t(e) });
+                $(".search-background-move").css({
+                    width: $(this).outerWidth(),
+                    left: t(e)
+                });
             },
-            function() {
-                $(".search-background-move").css({ width: 0, left: 0 });
+            function () {
+                $(".search-background-move").css({
+                    width: 0,
+                    left: 0
+                });
             }
         ),
         $(".header-fixed-search-index").hover(
-            function() {
+            function () {
                 var i = $(".header-search-index").index(this);
-                $(".search-fixed-background-move").css({ width: $(this).outerWidth(), left: e(i) });
+                $(".search-fixed-background-move").css({
+                    width: $(this).outerWidth(),
+                    left: e(i)
+                });
             },
-            function() {
-                $(".search-fixed-background-move").css({ width: 0, left: 0 });
+            function () {
+                $(".search-fixed-background-move").css({
+                    width: 0,
+                    left: 0
+                });
             }
         );
     var r = 0;
@@ -140,21 +165,21 @@ $(document).ready(function() {
     }
 
     function n(e, i) {
-        setTimeout(function() {
+        setTimeout(function () {
             $(e).addClass("show translate-default");
         }, i);
     }
 
     function o(e, i, t) {
-        setTimeout(function() {
+        setTimeout(function () {
             $(e).eq(t).addClass("show translate-default");
         }, i);
     }
-    $(window).scroll(function(e) {
+    $(window).scroll(function (e) {
             var i = $(this).scrollTop();
             i > r ? window.scrollY >= 150 && $(".header-fixed").addClass("show") : window.scrollY < 150 && $(".header-fixed").removeClass("show"), (r = i);
         }),
-        $(".menu-mobi__nav-item").click(function() {
+        $(".menu-mobi__nav-item").click(function () {
             $(this).find("a").addClass("active"), $(this).siblings().find("a").removeClass("active");
         }),
         $(".software-box-mobi .software-box-slide").slick({
@@ -162,9 +187,23 @@ $(document).ready(function() {
             slidesToScroll: 2,
             autoplay: !0,
             dots: !0,
-            responsive: [
-                { breakpoint: 576, settings: { slidesToShow: 1, slidesToScroll: 1, dots: !1, rows: 2 } },
-                { breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 2, dots: !0 } },
+            responsive: [{
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: !1,
+                        rows: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        dots: !0
+                    }
+                },
             ],
         }),
         $(".system-slider").owlCarousel({
@@ -179,9 +218,27 @@ $(document).ready(function() {
                 '<svg xmlns="http://www.w3.org/2000/svg" width="53" height="28" viewBox="0 0 53.02 27" class="modal-view-next" data-id="2">\n        <rect class="swiper-line" y="13.5" width="52.05" height="1"></rect>\n        <polygon class="swiper-cap" points="51.65 14 38.35 27.3 39.05 28 52.35 14.7 53.05 14 52.35 13.3 39.05 0 38.35 0.7 51.65 14">\n        </polygon>\n    </svg>',
             ],
             dots: !1,
-            responsive: { 0: { items: 1 } },
+            responsive: {
+                0: {
+                    items: 1
+                }
+            },
         }),
-        $(".main-slide").slick({ centerMode: !0, autoplay: !0, centerPadding: "60px", slidesToShow: 3, slidesToScroll: 2, swipeToSlide: !0, responsive: [{ breakpoint: 769, settings: { slidesToShow: 1, slidesToScroll: 1 } }] }),
+        $(".main-slide").slick({
+            centerMode: !0,
+            autoplay: !0,
+            centerPadding: "60px",
+            slidesToShow: 3,
+            slidesToScroll: 2,
+            swipeToSlide: !0,
+            responsive: [{
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
+        }),
         $(".review-app__slider").owlCarousel({
             nav: !0,
             loop: !0,
@@ -189,26 +246,41 @@ $(document).ready(function() {
             autoplayTimeout: 3e3,
             autoplayHoverPause: !0,
             margin: 0,
-            responsive: { 0: { items: 2, slideBy: 2 }, 500: { items: 2, slideBy: 2 }, 678: { items: 3 }, 1025: { items: 5 } },
+            responsive: {
+                0: {
+                    items: 2,
+                    slideBy: 2
+                },
+                500: {
+                    items: 2,
+                    slideBy: 2
+                },
+                678: {
+                    items: 3
+                },
+                1025: {
+                    items: 5
+                }
+            },
         }),
-        $(".swiper-button-next").click(function() {
+        $(".swiper-button-next").click(function () {
             $(".review-app .owl-next").trigger("click");
         }),
-        $(".swiper-button-prev").click(function() {
+        $(".swiper-button-prev").click(function () {
             $(".review-app .owl-prev").trigger("click");
         }),
-        $(".topleft-view-more").click(function() {
+        $(".topleft-view-more").click(function () {
             $(".review-app__topleft p").fadeIn(400), $(".review-app__topleft h3").html("APP KHÁCH HÀNG").css("color", "#404040"), $(".review-app__topleft .review-app_tag").html("Màu sắc & Thương hiệu riêng"), $(this).hide();
         }),
         $(".review-app__slider-item").hover(
-            function() {
+            function () {
                 $(this).find(".app-img-after").addClass("hide-img"), $(this).find(".app-img-before").addClass("show-img");
             },
-            function() {
+            function () {
                 $(this).find(".app-img-after").removeClass("hide-img"), $(this).find(".app-img-before").removeClass("show-img");
             }
         ),
-        $(".review-app__slider-item").click(function() {
+        $(".review-app__slider-item").click(function () {
             if ($(this).attr("data-title").length >= 5) {
                 $(".modal-review-app img").attr("src", $(this).attr("data-title")),
                     $(".modal-view-next").attr("data-id", parseInt($(this).attr("data-id")) + 1),
@@ -217,10 +289,10 @@ $(document).ready(function() {
                     $(".shadow-behind").addClass("show-img");
             }
         }),
-        $(".shadow-behind").click(function() {
+        $(".shadow-behind").click(function () {
             $(".modal-review-app").removeClass("show-img"), $(".shadow-behind").removeClass("show-img");
         }),
-        $(".modal-view-pre").click(function() {
+        $(".modal-view-pre").click(function () {
             1 == $(this).attr("data-id") ? $(this).attr("data-id", 10) : $(this).attr("data-id", parseInt($(this).attr("data-id")) - 1),
                 $(".modal-review-app__img img").attr(
                     "src",
@@ -229,7 +301,7 @@ $(document).ready(function() {
                     .attr("data-title")
                 );
         }),
-        $(".modal-view-next").click(function() {
+        $(".modal-view-next").click(function () {
             10 == $(this).attr("data-id") ? $(this).attr("data-id", 1) : $(this).attr("data-id", parseInt($(this).attr("data-id")) + 1),
                 $(".modal-review-app__img img").attr(
                     "src",
@@ -239,10 +311,10 @@ $(document).ready(function() {
                 );
         }),
         $("#email .search-title input")
-        .focusin(function() {
+        .focusin(function () {
             $(".search-title__under-line").css("background", "#1d1d1f");
         })
-        .focusout(function() {
+        .focusout(function () {
             $(".search-title__under-line").css("background", "#d2d2d2");
         }),
 
@@ -259,7 +331,7 @@ $(document).ready(function() {
         window.outerWidth <= 1366 ?
         ($(".main-head__title .review-app_tag").html("Ưu đãi 80% | Tặng tài khoản Canva Pro"), l()) :
         ($(".main-head__title .review-app_tag").html("Ưu đãi lên đến 80% | Tặng tài khoản Canva Pro"), s()),
-        $(window).resize(function() {
+        $(window).resize(function () {
             window.outerWidth > 440 ?
                 $(".introduce-box__title .introduce-box__des-software").html("Kết nối phần mềm") :
                 window.outerWidth > 1024 && $("#main-footer .row .footer-title span").html("Đối tác không thể thiếu<br> khi bạn kinh doanh</br> SPA / Thẩm mỹ viện"),
@@ -277,7 +349,7 @@ $(document).ready(function() {
                 ($(".main-head__title .review-app_tag").html("Ưu đãi 80% | Tặng tài khoản Canva Pro"), l(), $(".main-head__title .review-app_tag").html("Ưu đãi 80% | Tặng tài khoản Canva Pro")) :
                 ($(".main-head__title .review-app_tag").html("Ưu đãi lên đến 80% | Tặng tài khoản Canva Pro"), s());
         }),
-        $("#domain").on("change", function() {
+        $("#domain").on("change", function () {
             1 == $(this).val() ?
                 ($(".domain").siblings().eq(0).html('\n                    <p class="old-price">250.000</p>\n                    <p class="new-price">Free</p>\n                '), $(".domain").siblings().eq(1).html("250.000")) :
                 2 == $(this).val() ?
@@ -316,13 +388,16 @@ var EzsChangePrice = {
     init: () => {
         EzsChangePrice.render();
         $(".domain-item").click((e) => {
-            const { innerText, dataset } = e.target;
+            const {
+                innerText,
+                dataset
+            } = e.target;
             $(".domain-item-curent").html(innerText);
             $(".domain-first").html(EzsChangePrice.formatVND(Number(dataset.valueFirst))).attr("data-price-frist", dataset.valueFirst)
             $(".domain").html(EzsChangePrice.formatVND(Number(dataset.value))).attr("data-price", dataset.value)
             EzsChangePrice.render();
         })
-        $(".input-count").on("keyup", function(e) {
+        $(".input-count").on("keyup", function (e) {
             if (!e.target.value || Number(e.target.value) < 1) return;
             let totalFirst = 0;
             let total = 0;
@@ -347,7 +422,7 @@ var EzsChangePrice = {
     },
     getTotal: (el, attr) => {
         let total = 0;
-        $(el).each(function() {
+        $(el).each(function () {
             const elmPrice = $(this).attr(attr);
             total += Number(elmPrice)
         });
@@ -362,10 +437,42 @@ var EzsChangePrice = {
     },
 }
 
+var EzsListCustomer = {
+    init: () => {
+        EzsListCustomer.render()
+    },
+    render: () => {
+        const elmItem = $(".customer-main-item");
+        const minDelete = 1;
+        const maxDelete = 7;
+        const ListImg = []
+        if (elmItem.length > 0 && elmItem.hasClass("customer-main-set")) {
+            const ListItem = document.querySelectorAll(".customer-main-set");
+            for (let [index, elm] of ListItem.entries()) {
+                if (index > minDelete && index < maxDelete) {
+                    ListImg.push(EzsListCustomer.getUrlImage($(elm).find(".customer-charactor__box-detail")))
+                    ListItem[index].remove()
+                }
+            }
+            console.log(ListItem)
+            $(ListItem[minDelete]).find(".customer-charactor").html(ListImg.map((url, i) =>
+                $("<div>").append(
+                    `
+                        <div class="cus">${url}</div>
+                    `
+                )
+            ));
+        }
+    },
+    getUrlImage: (elm) => {
+        return elm.css('background-image').slice(4, -1).replace(/"/g, "");
+    }
+}
+
 var EzsFC = {
     init: () => {
         EzsFC.changeHref();
-        $(`[data-nav]`).click(function() {
+        $(`[data-nav]`).click(function () {
             const navName = $(this).data('nav');
             EzsFC.changeHref(navName)
         })
@@ -398,8 +505,14 @@ var EzsFC = {
             $(`[data-nav="${tabCurrent}"]`).addClass("active");
             $(`[data-tab]`).removeClass("active");
             $(`[data-tab="${tabCurrent}"]`).addClass("active");
-        }
-        else {
+            var doc = document.documentElement;
+            var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+            if (top != $("#scrollIntoView").offset().top - 50) {
+                $('html,body').animate({
+                    scrollTop: $("#scrollIntoView").offset().top - 50
+                }, 'slow');
+            }
+        } else {
             $(`[data-nav]`).first().addClass("active");
             $(`[data-tab]`).first().addClass("active");
         }

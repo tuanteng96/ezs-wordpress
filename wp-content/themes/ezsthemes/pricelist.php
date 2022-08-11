@@ -58,6 +58,7 @@ get_header();
                             <div class="price-s font-number" data-price-frist="19500000">
                                 19.500.000
                             </div>
+                            <div class="price-d">30.000.000</div>
                         </div>
                         <div class="price-head-item w-year">
                             <div class="price-s" data-price="0">
@@ -103,11 +104,13 @@ get_header();
                             <div class="price-s font-number" data-price-frist="0">
                                 Miễn phí
                             </div>
+                            <div class="price-d">200.000</div>
                         </div>
                         <div class="price-head-item w-year" data-price="0">
                             <div class="price-s">
                                 Miễn phí
                             </div>
+                            <div class="price-d">200.000</div>
                         </div>
                     </div>
                     <div class="price-body-item">
@@ -123,11 +126,13 @@ get_header();
                             <div class="price-s font-number" data-price-frist="0">
                                 Miễn phí
                             </div>
+                            <div class="price-d">2.400.000</div>
                         </div>
                         <div class="price-head-item w-year" data-price-frist="0">
                             <div class="price-s">
                                 Miễn phí
                             </div>
+                            <div class="price-d">2.400.000</div>
                         </div>
                     </div>
                     <div class="price-body-item">

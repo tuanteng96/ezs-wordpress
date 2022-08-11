@@ -12552,35 +12552,6 @@ button:focus {
     }
 }
 
-.c-pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-
-.c-pagination .page-numbers {
-    width: 40px;
-    height: 40px;
-    background-color: #eaeaeb;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 8px;
-    color: #535764;
-    display: inline-block;
-    font-size: 15px;
-    transition: all .2s ease;
-}
-
-.c-pagination .page-numbers.current,
-.c-pagination .page-numbers:hover {
-    background: #ff898d;
-    color: #fff;
-}
-
-.c-pagination>* {
-    margin: 0 4px
-}
-
 .c-pagination_box {
     font-size: 16px;
     line-height: 1.5;
