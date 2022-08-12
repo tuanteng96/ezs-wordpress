@@ -30,7 +30,7 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/lib/jq/jquery-3.6.0.js"></script>
 	<script src="<?php echo get_template_directory_uri() ?>/assets/lib/dragui/jquery-ui.js"></script>
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?6">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?9">
 
 	<?php wp_head(); ?>
 

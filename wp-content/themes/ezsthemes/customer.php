@@ -24,7 +24,7 @@ get_header();
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $query = new WP_Query(array(
             'cat' => 13,
-            'posts_per_page' => 8,
+            'posts_per_page' => 13,
             'paged' => $paged
         ));
         $total = $query->post_count; 
@@ -34,7 +34,7 @@ get_header();
 
             <!-- begin loop -->
             <?php while ($query->have_posts()) : $query->the_post(); ?>
-                <div class="customer-main-item<?php if ($total == 8) echo ' customer-main-set' ?>">
+                <div class="customer-main-item<?php if ($total == 13) echo ' customer-main-set' ?>">
                     <div class="container">
                         <div class="customer-charactor">
                             <div class="customer-charactor__box flex-md-row-reverse">

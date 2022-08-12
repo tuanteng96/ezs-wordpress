@@ -1,6 +1,6 @@
 <?php
 get_header(); ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/blog.css?4">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/blog.css?5">
 <div id="main">
     <div class="inner-wrap"></div>
     <div class="inner-wrap-title text-center">
@@ -15,11 +15,11 @@ get_header(); ?>
     <main class="l-main -blog ">
         <?php $term = get_queried_object(); ?>
         <section class="c-blogArticlesSec">
-            <div class="container -xsFullWidth">
+            <div class="container-fluid container-fluid-mx">
                 <div class="row c-blogArticlesSec_row -list -pt50 -pt0xs">
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
-                            <div class="col-md-6 col-xl-4 -mb40 -mb80sm">
+                            <div class="col-md-6 col-xl-4 -mb30">
                                 <a href="<?php the_permalink() ?>" class="c-teaserBlog">
                                     <figure class="c-teaserBlog_image">
                                         <img loading="lazy" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title_attribute(); ?>" />
