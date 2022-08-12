@@ -30,7 +30,7 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/lib/jq/jquery-3.6.0.js"></script>
 	<script src="<?php echo get_template_directory_uri() ?>/assets/lib/dragui/jquery-ui.js"></script>
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?9">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?1">
 
 	<?php wp_head(); ?>
 
@@ -288,31 +288,27 @@
 					</div>
 				</div>
 			</div>
+			<!-- https://codepen.io/tiffachoo/pen/yzZRXK -->
 			<div class="menu-mobi">
 				<ul class="menu-mobi__nav">
 					<li class="menu-mobi__nav-item">
-						<a class="active" href="<?php echo home_url(); ?>">
-							<span>01.</span> Trang chủ
+						<a class="active nav-link" href="<?php echo home_url(); ?>">
+							Trang chủ
 						</a>
 					</li>
-					<li class="menu-mobi__nav-item">
-						<?php if (is_home()) : ?>
-							<a href="#app">
-								<span>02.</span> Giải pháp
-								<div class="menu-mobi__icon-arrow">
-									<i class="fal fa-plus"></i>
-								</div>
-							</a>
-						<?php endif; ?>
-						<?php if (!is_home()) : ?>
-							<a href="<?php echo home_url(); ?>#app">
-								<span>02.</span> Giải pháp
-								<div class="menu-mobi__icon-arrow">
-									<i class="fal fa-plus"></i>
-								</div>
-							</a>
-						<?php endif; ?>
-						<ul class="menu-mobi__sub">
+					<li class="menu-mobi__nav-item nav-expand">
+						<a href="<?php echo home_url(); ?>#app">
+							Giải pháp
+						</a>
+						<div class="menu-mobi__icon-arrow nav-link">
+							<i class="fal fa-angle-right"></i>
+						</div>
+						<ul class="menu-mobi__sub nav-expand-content">
+							<li class="nav-item">
+								<a class="nav-link nav-back-link" href="javascript:;">
+									<< Giải pháp
+								</a>
+							</li>
 							<li>
 								<?php $the_query = new WP_Query('page_id=3195'); ?>
 								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
@@ -330,21 +326,26 @@
 					<li class="menu-mobi__nav-item">
 						<?php $the_query = new WP_Query('page_id=3193'); ?>
 						<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
-							<a href="<?php echo get_page_link() ?>">
-								<span>03.</span><?php the_title(); ?>
+							<a class="nav-link" href="<?php echo get_page_link() ?>">
+								<?php the_title(); ?>
 							</a>
 						<?php endwhile; ?>
 					</li>
-					<li class="menu-mobi__nav-item">
+					<li class="menu-mobi__nav-item nav-expand">
 						<?php $the_query = new WP_Query('page_id=3191'); ?>
 						<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
-							<a href="<?php echo home_url(); ?>#system">
-								<span>04.</span> <?php the_title(); ?>
+							<a class="nav-link" href="<?php echo home_url(); ?>#system">
+								<?php the_title(); ?>
 								<div class="menu-mobi__icon-arrow">
 									<i class="fal fa-plus"></i>
 								</div>
 							</a>
-							<ul class="menu-mobi__sub">
+							<ul class="menu-mobi__sub nav-expand-content">
+								<li class="nav-item">
+									<a class="nav-link nav-back-link" href="javascript:;">
+										<< <?php the_title(); ?>
+									</a>
+								</li>
 								<li><a href="<?php echo get_page_link() ?>?tab=demo">Tư vấn - Demo</a></li>
 								<li><a href="<?php echo get_page_link() ?>?tab=pay">Ký hợp đồng - Thanh toán</a>
 								</li>
@@ -358,12 +359,12 @@
 					<li class="menu-mobi__nav-item">
 						<?php $the_query = new WP_Query('page_id=3188'); ?>
 						<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
-							<a href="<?php echo get_page_link() ?>">
-								<span>05.</span><?php the_title(); ?>
+							<a class="nav-link" href="<?php echo get_page_link() ?>">
+								<?php the_title(); ?>
 							</a>
 						<?php endwhile; ?>
 					</li>
-					<li class="menu-mobi__nav-item">
+					<li class="menu-mobi__nav-item nav-expand">
 						<?php
 						$value = get_terms(
 							array(
@@ -375,13 +376,18 @@
 						);
 						if (!empty($value) && is_array($value)) {
 							foreach ($value as $key) { ?>
-								<a href="<?php echo esc_url(get_term_link($key)) ?>">
-									<span>06.</span> blogs
+								<a class="nav-link" href="<?php echo esc_url(get_term_link($key)) ?>">
+									Blogs
 									<div class="menu-mobi__icon-arrow">
 										<i class="fal fa-plus"></i>
 									</div>
 								</a>
-								<ul class="menu-mobi__sub">
+								<ul class="menu-mobi__sub nav-expand-content">
+									<li class="nav-item">
+										<a class="nav-link nav-back-link" href="javascript:;">
+											<< Blogs
+										</a>
+									</li>
 									<?php
 									$value1 = get_terms(
 										array(

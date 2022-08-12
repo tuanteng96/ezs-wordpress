@@ -13132,7 +13132,7 @@ button:focus {
 
 @media (max-width:767px) {
     .c-blogArticle_header .t-title {
-        font-size: 32px;
+        font-size: 25px;
         line-height: 1.375
     }
 }

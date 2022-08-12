@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/blog.css?3">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/blog.css?4">
 
 <div id="main">
     <div class="inner-wrap">
@@ -36,7 +36,7 @@ get_header();
     <main class="l-main -blog">
         <article class="c-blogArticle">
             <div class="container not-fix-container">
-                <div class="d-flex">
+                <div class="d-flex c-blogArticle-list">
                     <div class="-blog-main">
                         <img class="w-100" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" />
                         <header class=" c-blogArticle_header -mb30 -mb20sm">
