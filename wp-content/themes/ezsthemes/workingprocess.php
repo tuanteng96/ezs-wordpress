@@ -20,7 +20,7 @@ get_header();
     </div>
     <div class="fc-detail" id="scrollIntoView">
         <div class="fc-detail-header">
-            <div class="container not-fix-container">
+            <div class="container-fluid container-fluid-mx">
                 <div class="fc-tabs">
                     <ul class="fc-tab">
                         <li class="active" data-nav="demo">
@@ -44,7 +44,7 @@ get_header();
             </div>
         </div>
         <div class="fc-detail-wrap">
-            <div class="container not-fix-container">
+            <div class="container-fluid container-fluid-mx">
                 <div class="fc-detail-main">
                     <div class="fc-tab-content" data-tab="demo">
                         <div class="fc-content">
@@ -778,13 +778,13 @@ get_header();
                                         <td>
                                             <ul>
                                                 <li>
-                                                Tạo nhóm riêng cho SPA & các nhân viên EZS để <code class="fs-14px">trao đổi Support</code>
+                                                    Tạo nhóm riêng cho SPA & các nhân viên EZS để <code class="fs-14px">trao đổi Support</code>
                                                 </li>
                                                 <li>
-                                                Hỗ trợ trực tuyến thông qua <code class="fs-14px">Zoom</code> hoặc công cụ <code class="fs-14px">Ultraviewer, Teamviewer</code>
+                                                    Hỗ trợ trực tuyến thông qua <code class="fs-14px">Zoom</code> hoặc công cụ <code class="fs-14px">Ultraviewer, Teamviewer</code>
                                                 </li>
                                                 <li>
-                                                Hỗ trợ đào tạo lại nhân viên spa trong trường hợp Spa có thay đổi nhân sự
+                                                    Hỗ trợ đào tạo lại nhân viên spa trong trường hợp Spa có thay đổi nhân sự
                                                 </li>
                                             </ul>
                                         </td>
@@ -796,10 +796,10 @@ get_header();
                                         <td>
                                             <ul>
                                                 <li>
-                                                Tất cả các lỗi phát sinh trong quá trình sử dụng được bên Spa thông báo sẽ được khắc phục ngay lập tức <code class="fs-14px">trong vòng 4 giờ</code>
+                                                    Tất cả các lỗi phát sinh trong quá trình sử dụng được bên Spa thông báo sẽ được khắc phục ngay lập tức <code class="fs-14px">trong vòng 4 giờ</code>
                                                 </li>
                                                 <li>
-                                                Những vấn đề đến từ bên thứ 3 ( <code class="fs-14px">Tên miền, Trung tâm dữ liệu và Apple, CHPLAY …</code> ) sẽ được xử lý theo quy trình do bên thứ 3 quy định <code class="fs-14px">Một số trường hợp có thể phát sinh chi phí</code>
+                                                    Những vấn đề đến từ bên thứ 3 ( <code class="fs-14px">Tên miền, Trung tâm dữ liệu và Apple, CHPLAY …</code> ) sẽ được xử lý theo quy trình do bên thứ 3 quy định <code class="fs-14px">Một số trường hợp có thể phát sinh chi phí</code>
                                                 </li>
                                             </ul>
                                         </td>
@@ -809,7 +809,7 @@ get_header();
                                             <code>Nâng cấp</code>
                                         </td>
                                         <td>
-                                        Khách hàng sẽ được nâng cấp theo tiến trình nâng cấp chung của công ty cho toàn bộ giải pháp mà <code class="fs-14px">không mất thêm chi phí</code>
+                                            Khách hàng sẽ được nâng cấp theo tiến trình nâng cấp chung của công ty cho toàn bộ giải pháp mà <code class="fs-14px">không mất thêm chi phí</code>
                                         </td>
                                     </tr>
                                 </tbody>

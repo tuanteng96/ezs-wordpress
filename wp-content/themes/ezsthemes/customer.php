@@ -27,7 +27,7 @@ get_header();
             'posts_per_page' => 13,
             'paged' => $paged
         ));
-        $total = $query->post_count; 
+        $total = $query->post_count;
         ?>
 
         <?php if ($query->have_posts()) : ?>
@@ -35,10 +35,11 @@ get_header();
             <!-- begin loop -->
             <?php while ($query->have_posts()) : $query->the_post(); ?>
                 <div class="customer-main-item<?php if ($total == 13) echo ' customer-main-set' ?>">
-                    <div class="container">
+                    <div class="container-fluid container-fluid-mx">
                         <div class="customer-charactor">
                             <div class="customer-charactor__box flex-md-row-reverse">
-                                <figure class="customer-charactor__box-detail" style="background-image:url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>">
+                                <figure class="customer-charactor__box-detail">
+                                    <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title(); ?>">
                                 </figure>
                                 <div class="customer-charactor__content">
                                     <p class="upper-title"><?php the_field('website') ?></p>

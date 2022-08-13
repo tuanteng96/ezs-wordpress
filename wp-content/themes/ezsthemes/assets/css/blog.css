@@ -184,29 +184,6 @@ input[type=search]::-ms-reveal {
     height: 0
 }
 
-body,
-html {
-    width: 100%;
-    min-width: 320px;
-    color: #000;
-    background: #fff
-}
-
-html {
-    overflow-x: hidden;
-    font-size: 1px;
-    scroll-behavior: smooth
-}
-
-html.-blocked {
-    overflow-y: hidden
-}
-
-body {
-    font-size: 12rem;
-    line-height: 1.2
-}
-
 * {
     box-sizing: border-box;
     padding: 0;

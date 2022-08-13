@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/blog.css?4">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/blog.css?5">
 
 <div id="main">
     <div class="inner-wrap">

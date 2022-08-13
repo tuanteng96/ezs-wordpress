@@ -22,6 +22,9 @@
 	<!-- Bootstrap 4 -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/lib/bootstrap/css/bootstrap.css?1">
 
+	<!-- Animate -->
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/lib/animate/animate.min.css">
+
 	<!-- PLUGINS SLICKSLIDER -->
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/lib/slick/slick/slick.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/lib/slick/slick/slick-theme.css" />
@@ -30,7 +33,7 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/lib/jq/jquery-3.6.0.js"></script>
 	<script src="<?php echo get_template_directory_uri() ?>/assets/lib/dragui/jquery-ui.js"></script>
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?1">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?4">
 
 	<?php wp_head(); ?>
 
@@ -290,7 +293,8 @@
 			</div>
 			<!-- https://codepen.io/tiffachoo/pen/yzZRXK -->
 			<div class="menu-mobi">
-				<ul class="menu-mobi__nav">
+				<div class="mobile-bg"></div>
+				<ul class="menu-mobi__nav animate__animated">
 					<li class="menu-mobi__nav-item">
 						<a class="active nav-link" href="<?php echo home_url(); ?>">
 							Trang chủ
@@ -306,7 +310,8 @@
 						<ul class="menu-mobi__sub nav-expand-content">
 							<li class="nav-item">
 								<a class="nav-link nav-back-link" href="javascript:;">
-									<< Giải pháp
+									<div class="icon-back"><i class="fal fa-angle-double-left"></i></div>
+									Giải pháp
 								</a>
 							</li>
 							<li>
@@ -334,16 +339,17 @@
 					<li class="menu-mobi__nav-item nav-expand">
 						<?php $the_query = new WP_Query('page_id=3191'); ?>
 						<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
-							<a class="nav-link" href="<?php echo home_url(); ?>#system">
+							<a href="<?php echo home_url(); ?>#system">
 								<?php the_title(); ?>
-								<div class="menu-mobi__icon-arrow">
-									<i class="fal fa-plus"></i>
-								</div>
 							</a>
+							<div class="menu-mobi__icon-arrow nav-link">
+								<i class="fal fa-angle-right"></i>
+							</div>
 							<ul class="menu-mobi__sub nav-expand-content">
 								<li class="nav-item">
 									<a class="nav-link nav-back-link" href="javascript:;">
-										<< <?php the_title(); ?>
+										<div class="icon-back"><i class="fal fa-angle-double-left"></i></div>
+										<?php the_title(); ?>
 									</a>
 								</li>
 								<li><a href="<?php echo get_page_link() ?>?tab=demo">Tư vấn - Demo</a></li>
@@ -376,16 +382,17 @@
 						);
 						if (!empty($value) && is_array($value)) {
 							foreach ($value as $key) { ?>
-								<a class="nav-link" href="<?php echo esc_url(get_term_link($key)) ?>">
+								<a href="<?php echo esc_url(get_term_link($key)) ?>">
 									Blogs
-									<div class="menu-mobi__icon-arrow">
-										<i class="fal fa-plus"></i>
-									</div>
 								</a>
+								<div class="menu-mobi__icon-arrow nav-link">
+									<i class="fal fa-angle-right"></i>
+								</div>
 								<ul class="menu-mobi__sub nav-expand-content">
 									<li class="nav-item">
 										<a class="nav-link nav-back-link" href="javascript:;">
-											<< Blogs
+											<div class="icon-back"><i class="fal fa-angle-double-left"></i></div>
+											Blogs
 										</a>
 									</li>
 									<?php

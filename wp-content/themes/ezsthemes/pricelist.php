@@ -19,7 +19,7 @@ get_header();
         <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
     </div>
     <div id="price-list" class="pt-5">
-        <div class="container">
+        <div class="container-fluid container-fluid-mx">
             <div class="bg-white price-list-box">
                 <div class="price-head">
                     <div class="price-head-item w-flex d-flex align-items-center">
@@ -55,12 +55,14 @@ get_header();
                             </div>
                         </div>
                         <div class="price-head-item w-year">
+                            <div class="price-note"><code>Năm đầu</code></div>
                             <div class="price-s font-number" data-price-frist="19500000">
                                 19.500.000
                             </div>
                             <div class="price-d">30.000.000</div>
                         </div>
                         <div class="price-head-item w-year">
+                            <div class="price-note"><code>Năm tiếp theo</code></div>
                             <div class="price-s" data-price="0">
                                 Miễn phí
                             </div>
@@ -84,11 +86,13 @@ get_header();
                             </div>
                         </div>
                         <div class="price-head-item w-year">
+                            <div class="price-note"><code>Năm đầu</code></div>
                             <div class="price-s font-number domain-first" data-price-frist="300000">
                                 300.000
                             </div>
                         </div>
                         <div class="price-head-item w-year">
+                            <div class="price-note"><code>Năm tiếp theo</code></div>
                             <div class="price-s domain" data-price="300000">
                                 300.000
                             </div>
@@ -101,16 +105,18 @@ get_header();
                             </div>
                         </div>
                         <div class="price-head-item w-year">
+                            <div class="price-note"><code>Năm đầu</code></div>
                             <div class="price-s font-number" data-price-frist="0">
                                 Miễn phí
                             </div>
                             <div class="price-d">200.000</div>
                         </div>
-                        <div class="price-head-item w-year" data-price="0">
+                        <div class="price-head-item w-year">
+                            <div class="price-note"><code>Năm tiếp theo</code></div>
                             <div class="price-s">
                                 Miễn phí
                             </div>
-                            <div class="price-d">200.000</div>
+                            <div class="price-d" data-price="0">200.000</div>
                         </div>
                     </div>
                     <div class="price-body-item">
@@ -123,16 +129,18 @@ get_header();
                             </div>
                         </div>
                         <div class="price-head-item w-year">
+                            <div class="price-note"><code>Năm đầu</code></div>
                             <div class="price-s font-number" data-price-frist="0">
                                 Miễn phí
                             </div>
                             <div class="price-d">2.400.000</div>
                         </div>
-                        <div class="price-head-item w-year" data-price-frist="0">
+                        <div class="price-head-item w-year">
+                            <div class="price-note"><code>Năm tiếp theo</code></div>
                             <div class="price-s">
                                 Miễn phí
                             </div>
-                            <div class="price-d">2.400.000</div>
+                            <div class="price-d" data-price-frist="0">2.400.000</div>
                         </div>
                     </div>
                     <div class="price-body-item">
@@ -154,12 +162,14 @@ get_header();
                             </div>
                         </div>
                         <div class="price-head-item w-year">
+                            <div class="price-note"><code>Năm đầu</code></div>
                             <div class="price-s font-number cs-first" data-price-frist="3000000">
                                 3.000.000
                             </div>
                         </div>
-                        <div class="price-head-item w-year cs" data-price="3000000">
-                            <div class="price-s">
+                        <div class="price-head-item w-year cs">
+                            <div class="price-note"><code>Năm tiếp theo</code></div>
+                            <div class="price-s" data-price="3000000">
                                 3.000.000
                             </div>
                         </div>
