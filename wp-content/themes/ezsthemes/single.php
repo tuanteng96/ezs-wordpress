@@ -18,20 +18,21 @@ get_header();
     <div class="inner-wrap-title text-center">
         <div class="container">
             <div class="inner-wrap_content">
-                <h1>
+                <h2 class="sub-h1">
                     <?php $category = get_the_category();
-                    $firstCategory = $category[0]->cat_name; echo $firstCategory;?>
-                </h1>
+                    $firstCategory = $category[0]->cat_name;
+                    echo $firstCategory; ?>
+                </h2>
                 <div class="desc">
-                <?php
-                    if ( function_exists('yoast_breadcrumb') ) {
-                    yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+                    <?php
+                    if (function_exists('yoast_breadcrumb')) {
+                        yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
                     }
                     ?>
                 </div>
             </div>
         </div>
-        <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
+        <img class="d-block" src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
     </div>
     <main class="l-main -blog">
         <article class="c-blogArticle">
@@ -123,7 +124,7 @@ get_header();
                     <div class="col">
                         <h4 class="c-postSliderSec_title t-title -mb60 -f32 -f28sm">Cùng chuyên mục</h4>
                         <div class="swiper-container c-postSliderSec_swiper">
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper row">
                                 <?php
                                 $categories = get_the_category($post->ID);
                                 if ($categories) {
@@ -141,8 +142,8 @@ get_header();
                                         while ($my_query->have_posts()) {
                                             $my_query->the_post();
                                 ?>
-                                            <div class="swiper-slide col-md-6 col-xl-4">
-                                                <a href="#" class="c-teaserBlog">
+                                            <div class="col-md-6 col-xl-4">
+                                                <a href="<?php the_permalink() ?>" class="c-teaserBlog">
                                                     <figure class="c-teaserBlog_image">
                                                         <img loading="lazy" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>" alt="<?php the_title(); ?>" />
                                                     </figure>
@@ -165,9 +166,6 @@ get_header();
                                 }
                                 ?>
                             </div>
-                            <button type="button" class="c-btnSliderNav -prev -light -maxLeft"></button>
-                            <button type="button" class="c-btnSliderNav -next -light -maxRight"></button>
-                            <div class="swiper-pagination -darkTeal"></div>
                         </div>
                     </div>
                 </div>

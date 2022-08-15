@@ -13,10 +13,10 @@ get_header();
         <div class="container">
             <div class="inner-wrap_content">
                 <h1>9 năm - 1500 Khách hàng</h1>
-                <div class="desc">Chúng tôi yêu thích và hiểu rõ cách làm thế nào để giúp website hỗ trợ tốt nhất cho chuyện kinh doanh của bạn.</div>
+                <h2 class="desc">Chúng tôi yêu thích và hiểu rõ cách làm thế nào để giúp website hỗ trợ tốt nhất cho chuyện kinh doanh của bạn.</h2>
             </div>
         </div>
-        <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
+        <img class="d-block" src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
     </div>
     <div class="customer-main">
 

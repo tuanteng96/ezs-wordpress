@@ -12,11 +12,11 @@ get_header();
     <div class="inner-wrap-title text-center">
         <div class="container">
             <div class="inner-wrap_content">
-                <h1>Quy trình triển khai</h1>
-                <div class="desc">Quy trình chuẩn triển khai cho khách hàng sử phần mềm quản lý SPA EZS</div>
+                <h1><?php the_field('sub_title') ?></h1>
+                <h2 class="desc"><?php the_excerpt(); ?></h2>
             </div>
         </div>
-        <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
+        <img class="d-block" src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
     </div>
     <div class="fc-detail" id="scrollIntoView">
         <div class="fc-detail-header">
@@ -24,19 +24,19 @@ get_header();
                 <div class="fc-tabs">
                     <ul class="fc-tab">
                         <li class="active" data-nav="demo">
-                            <span class="text-uppercase title"><span class="font-number">1.</span> Tư vấn & Demo</span>
+                            <h3 class="text-uppercase title mb-0"><span class="font-number">1.</span> Tư vấn & Demo</h3>
                             <span class="text-gray-500 desc">Thực hiện tư vấn</span>
                         </li>
                         <li data-nav="pay">
-                            <span class="text-uppercase title"><span class="font-number">2.</span> Hợp đồng & Thanh toán</span>
+                            <h3 class="text-uppercase title mb-0"><span class="font-number">2.</span> Hợp đồng & Thanh toán</h3>
                             <span class="text-gray-500 desc">Kí kết và thanh toán</span>
                         </li>
                         <li data-nav="guide">
-                            <span class="text-uppercase title"><span class="font-number">3.</span> Bàn giao & Hướng dẫn</span>
+                            <h3 class="text-uppercase title mb-0"><span class="font-number">3.</span> Bàn giao & Hướng dẫn</h3>
                             <span class="text-gray-500 desc">Hướng dẫn sử dụng</span>
                         </li>
                         <li data-nav="support">
-                            <span class="text-uppercase title"><span class="font-number">4.</span> Bảo hành & Hỗ trợ</span>
+                            <h3 class="text-uppercase title mb-0"><span class="font-number">4.</span> Bảo hành & Hỗ trợ</h3>
                             <span class="text-gray-500 desc">Update tính năng</span>
                         </li>
                     </ul>

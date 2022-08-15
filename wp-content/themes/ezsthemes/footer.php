@@ -4,7 +4,7 @@
     </div>
     <div class="container-fluid container-fluid-mx">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-5 col-md-5">
                 <div class="footer-logo">
                     <a href="/"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo-trang.png" alt="Phần mềm quản lý Spa - Thẩm mỹ viện EZS" class="lazyloaded" data-ll-status="loaded"></a>
                 </div>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-9 col-lg-5 order-lg-3">
+            <div class="col-12 col-md-4 col-lg-4 order-md-3">
                 <div class="footer-nvtalk">
                     <p class="mb-10px">" <strong>EZS - Đối tác không thể thiếu khi bạn kinh doanh SPA / Thẩm mỹ viện</strong> "</p>
                     <p class="mb-30px">Chúng tôi cung cấp giải pháp quản trị 5 sao giúp tăng doanh số, tìm kiếm khách hàng, giảm chi phí quản lý và nâng cao chất lượng dịch vụ cho các SPA / Thẩm mỹ viện.</p>
@@ -93,7 +93,8 @@
 <script src="<?php echo get_template_directory_uri() ?>/assets/lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/assets/lib/owl-carousel/owl.carousel.min.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/assets/lib/theia-sticky/theia-sticky-sidebar.js"></script>
-<script src="<?php echo get_template_directory_uri() ?>/assets/js/demo.js?7"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/lib/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/assets/js/index.js?10"></script>
 <!-- <script src="<?php echo get_template_directory_uri() ?>/assets/js/blog-detail.js"></script> -->
 <script>
     jQuery.event.special.touchstart = {

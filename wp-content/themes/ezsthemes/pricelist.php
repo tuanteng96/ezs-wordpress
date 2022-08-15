@@ -12,11 +12,11 @@ get_header();
     <div class="inner-wrap-title text-center">
         <div class="container">
             <div class="inner-wrap_content">
-                <h1>Bảng giá dịch vụ</h1>
-                <div class="desc">Lưu ý : Chi phí dưới chưa bao gồm Thuế & chi phí thiết bị đi kèm.</div>
+                <h1><?php the_field('sub_title') ?></h1>
+                <h2 class="desc"><?php the_excerpt(); ?></h2>
             </div>
         </div>
-        <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
+        <img class="d-block" src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
     </div>
     <div id="price-list" class="pt-5">
         <div class="container-fluid container-fluid-mx">
@@ -48,9 +48,9 @@ get_header();
                     <div class="price-body-item">
                         <div class="price-head-item w-flex">
                             <div class="price-content">
-                                <div class="price-content-title">Phần mềm, APP Android & IOS, Website</div>
+                                <h2 class="price-content-title mb-0">Phần mềm, APP Android & IOS, Website</h2>
                                 <div class="price-content-desc">
-                                    Phần mềm quản lý spa , App khách hàng thương hiệu riêng 2 phiên bản android và IOS, Khởi tạo website giới thiệu Spa/ thẩm mỹ viện với tên miền riêng
+                                    <h3>Phần mềm quản lý spa, App khách hàng thương hiệu riêng 2 phiên bản android và IOS, Khởi tạo website giới thiệu Spa/ thẩm mỹ viện với tên miền riêng </h3>
                                 </div>
                             </div>
                         </div>
@@ -125,7 +125,7 @@ get_header();
                                 Phí tài khoản Appstore - <span class="text-danger font-number">99$ / 1 năm</span>
                             </div>
                             <div class="price-content-desc">
-                                Miễn phí duy trì app trên tài khoản chung của công ty EZS
+                                <h3>Miễn phí duy trì app trên tài khoản chung của công ty EZS</h3>
                             </div>
                         </div>
                         <div class="price-head-item w-year">

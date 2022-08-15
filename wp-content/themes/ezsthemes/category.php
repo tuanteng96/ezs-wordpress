@@ -7,10 +7,10 @@ get_header(); ?>
         <div class="container">
             <div class="inner-wrap_content">
                 <h1><?php single_cat_title(); ?></h1>
-                <div class="desc"><?php the_archive_description(); ?></div>
+                <h2 class="desc"><?php the_archive_description(); ?></h2>
             </div>
         </div>
-        <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
+        <img class="d-block" src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
     </div>
     <main class="l-main -blog ">
         <?php $term = get_queried_object(); ?>

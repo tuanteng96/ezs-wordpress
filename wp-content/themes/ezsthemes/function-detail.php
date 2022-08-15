@@ -12,11 +12,11 @@ get_header();
     <div class="inner-wrap-title text-center">
         <div class="container">
             <div class="inner-wrap_content">
-                <h1>Chi tiết chức năng</h1>
-                <div class="desc">Tổng hợp các chứng năng có trên phần mềm quản lý SPA EZS</div>
+                <h1><?php the_field('sub_title') ?></h1>
+                <h2 class="desc"><?php the_excerpt(); ?></h2>
             </div>
         </div>
-        <img src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
+        <img class="d-block" src="<?php echo get_template_directory_uri() ?>/assets/img/pattern-4.png" alt="logo">
     </div>
     <div class="fc-detail" id="scrollIntoView">
         <div class="fc-detail-header">
@@ -24,27 +24,27 @@ get_header();
                 <div class="fc-tabs">
                     <ul class="fc-tab">
                         <li class="active" data-nav="setting">
-                            <span class="text-uppercase title"><span class="font-number">1.</span> Cài đặt</span>
+                            <h3 class="text-uppercase title mb-0"><span class="font-number">1.</span> Cài đặt</h3>
                             <span class="text-gray-500 desc">Cài đặt hệ thống</span>
                         </li>
                         <li data-nav="manage">
-                            <span class="text-uppercase title"><span class="font-number">2.</span> Quản lý</span>
+                            <h3 class="text-uppercase title mb-0"><span class="font-number">2.</span> Quản lý</h3>
                             <span class="text-gray-500 desc">Pos quản lý tại điểm</span>
                         </li>
                         <li data-nav="website">
-                            <span class="text-uppercase title"><span class="font-number">3.</span> Website</span>
+                            <h3 class="text-uppercase title mb-0"><span class="font-number">3.</span> Website</h3>
                             <span class="text-gray-500 desc">Quản lý Website</span>
                         </li>
                         <li data-nav="app">
-                            <span class="text-uppercase title"><span class="font-number">4.</span> App</span>
+                            <h3 class="text-uppercase title mb-0"><span class="font-number">4.</span> App</h3>
                             <span class="text-gray-500 desc">Quản lý App</span>
                         </li>
                         <li data-nav="report">
-                            <span class="text-uppercase title"><span class="font-number">5.</span> Báo cáo</span>
+                            <h3 class="text-uppercase title mb-0"><span class="font-number">5.</span> Báo cáo</h3>
                             <span class="text-gray-500 desc">Quản lý thống kê</span>
                         </li>
                         <li data-nav="device">
-                            <span class="text-uppercase title"><span class="font-number">6.</span> Thiết bị</span>
+                            <h3 class="text-uppercase title mb-0"><span class="font-number">6.</span> Thiết bị</h3>
                             <span class="text-gray-500 desc">Quản lý Thiết bị</span>
                         </li>
                     </ul>

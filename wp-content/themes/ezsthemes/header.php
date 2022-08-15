@@ -25,15 +25,19 @@
 	<!-- Animate -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/lib/animate/animate.min.css">
 
+	<!-- Magnific -->
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/lib/magnific-popup/magnific-popup.css">
+
 	<!-- PLUGINS SLICKSLIDER -->
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/lib/slick/slick/slick.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/assets/lib/slick/slick/slick-theme.css" />
 
+	<!-- INDEX CSS -->
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/index.css?8">
+
 	<!-- css,js,jq -->
 	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/lib/jq/jquery-3.6.0.js"></script>
 	<script src="<?php echo get_template_directory_uri() ?>/assets/lib/dragui/jquery-ui.js"></script>
-
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/css/demo.css?4">
 
 	<?php wp_head(); ?>
 
@@ -59,7 +63,7 @@
 									<li>
 										<?php $the_query = new WP_Query('page_id=3195'); ?>
 										<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
-											<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
+											<a class="popup-youtube" href="<?php the_field('url_video') ?>"><?php the_title(); ?></a>
 										<?php endwhile; ?>
 									</li>
 									<li>
@@ -168,12 +172,12 @@
 						<ul class="d-inline-flex h-100 align-items-center">
 							<li data-stt="0"><a href="<?php echo home_url(); ?>" title="Trang chủ"><span>01.</span>Trang chủ</a></li>
 							<li data-stt="1">
-								<a href="<?php echo home_url(); ?>#app"><span>02.</span>Giải pháp</a>
+								<a class="popup-youtube" href="<?php echo home_url(); ?>#app"><span>02.</span>Giải pháp</a>
 								<ul class="header-top__menu-sub">
 									<li>
 										<?php $the_query = new WP_Query('page_id=3195'); ?>
 										<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
-											<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
+											<a class="popup-youtube" href="<?php the_field('url_video') ?>"><?php the_title(); ?></a>
 										<?php endwhile; ?>
 									</li>
 									<li>
@@ -317,7 +321,7 @@
 							<li>
 								<?php $the_query = new WP_Query('page_id=3195'); ?>
 								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
-									<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
+									<a class="popup-youtube" href="<?php the_field('url_video') ?>"><?php the_title(); ?></a>
 								<?php endwhile; ?>
 							</li>
 							<li>

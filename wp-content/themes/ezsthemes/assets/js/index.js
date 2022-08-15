@@ -4,6 +4,15 @@ $(document).ready(function() {
     EzsFC.init()
     EzsListCustomer.init()
 
+    $('.popup-youtube').magnificPopup({
+        //disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+    });
+
     const navExpand = [].slice.call(document.querySelectorAll('.nav-expand'))
         //     const backLink = `<li class="nav-item">
         // 	<a class="nav-link nav-back-link" href="javascript:;">
@@ -193,8 +202,8 @@ $(document).ready(function() {
             i > r ? window.scrollY >= 150 && $(".header-fixed").addClass("show") : window.scrollY < 150 && $(".header-fixed").removeClass("show"), (r = i);
         }),
         $(".software-box-mobi .software-box-slide").slick({
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 3,
+            slidesToScroll: 3,
             autoplay: !0,
             dots: !0,
             responsive: [{
@@ -209,8 +218,8 @@ $(document).ready(function() {
                 {
                     breakpoint: 768,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
                         dots: !0
                     }
                 },
@@ -242,7 +251,7 @@ $(document).ready(function() {
             slidesToScroll: 2,
             swipeToSlide: !0,
             responsive: [{
-                breakpoint: 769,
+                breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -512,6 +521,7 @@ var EzsFC = {
     },
     changeHref: (tab) => {
         const tabCurrent = tab || EzsFC.getParamUrl("tab", window.location.href);
+        const clientYs = $(window).width() > 767 ? 50 : 25;
         if (tabCurrent) {
             $(`[data-nav]`).removeClass("active");
             $(`[data-nav="${tabCurrent}"]`).addClass("active");
@@ -519,9 +529,9 @@ var EzsFC = {
             $(`[data-tab="${tabCurrent}"]`).addClass("active");
             var doc = document.documentElement;
             var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-            if (top != $("#scrollIntoView").offset().top - 50) {
+            if (top != $("#scrollIntoView").offset().top - clientYs) {
                 $('html,body').animate({
-                    scrollTop: $("#scrollIntoView").offset().top - 50
+                    scrollTop: $("#scrollIntoView").offset().top - clientYs
                 }, 'slow');
             }
         } else {
