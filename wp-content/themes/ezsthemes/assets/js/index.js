@@ -13,6 +13,15 @@ $(document).ready(function() {
         fixedContentPos: false
     });
 
+    $(".c-blogArticle_richText img").click(function() {
+        $.magnificPopup.open({
+            items: {
+                src: $(this).attr('src')
+            },
+            type: 'image' // this is default type
+        });
+    })
+
     const navExpand = [].slice.call(document.querySelectorAll('.nav-expand'))
         //     const backLink = `<li class="nav-item">
         // 	<a class="nav-link nav-back-link" href="javascript:;">
@@ -420,13 +429,8 @@ var EzsChangePrice = {
             if (!e.target.value || Number(e.target.value) < 1) return;
             let totalFirst = 0;
             let total = 0;
-            if (e.target.value > 5) {
-                totalFirst = 2000000 * Number(e.target.value);
-                total = 2000000 * Number(e.target.value);
-            } else {
-                totalFirst = 3000000 * Number(e.target.value);
-                total = 3000000 * Number(e.target.value);
-            }
+            totalFirst = 3000000 * Number(e.target.value);
+            total = 3000000 * Number(e.target.value);
             $(".cs-first").html(EzsChangePrice.formatVND(totalFirst)).attr("data-price-frist", totalFirst)
             $(".cs").html(EzsChangePrice.formatVND(total)).attr("data-price", total)
             $(".total-count").html(e.target.value)

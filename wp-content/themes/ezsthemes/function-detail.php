@@ -1063,7 +1063,7 @@ get_header();
                                     </tr>
                                 </tbody>
                                 <!-- ========================== -->
-                                <thead>
+                                <!-- <thead>
                                     <tr>
                                         <th class="fs-4 fw-bold text-dark ps-6 py-6" colspan="2">
                                             Chăm sóc khách hàng
@@ -1090,7 +1090,7 @@ get_header();
                                             </ul>
                                         </td>
                                     </tr>
-                                </tbody>
+                                </tbody> -->
                             </table>
 
                         </div>
@@ -1448,7 +1448,7 @@ get_header();
                                     </tr>
                                 </tbody>
                                 <!-- ========================== -->
-                                <thead>
+                                <!-- <thead>
                                     <tr>
                                         <th class="fs-4 fw-bold text-dark ps-6 py-6" colspan="2">
                                             Nhận Smart Call
@@ -1464,7 +1464,7 @@ get_header();
                                             Cho phép đo lường <code class="fs-14px">thời gian nghe của khách hàng</code> để đổi <code class="fs-14px">sale tiếp cận Marketing</code>
                                         </td>
                                     </tr>
-                                </tbody>
+                                </tbody> -->
                                 <!-- ========================== -->
                                 <thead>
                                     <tr>

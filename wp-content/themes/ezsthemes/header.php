@@ -58,7 +58,10 @@
 						<ul>
 							<li data-stt="0"><a href="<?php echo home_url(); ?>"><span>01.</span>Trang chủ</a></li>
 							<li data-stt="1">
-								<a href="<?php echo home_url(); ?>#app"><span>02.</span>Giải pháp</a>
+								<?php $the_query = new WP_Query('page_id=3195'); ?>
+								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+									<a class="popup-youtube" href="<?php the_field('url_video') ?>"><span>02.</span>Giải pháp</a>
+								<?php endwhile; ?>
 								<ul class="header-top__menu-sub">
 									<li>
 										<?php $the_query = new WP_Query('page_id=3195'); ?>
@@ -68,6 +71,12 @@
 									</li>
 									<li>
 										<?php $the_query = new WP_Query('page_id=3197'); ?>
+										<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+											<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
+										<?php endwhile; ?>
+									</li>
+									<li>
+										<?php $the_query = new WP_Query('page_id=3251'); ?>
 										<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
 											<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
 										<?php endwhile; ?>
@@ -85,7 +94,7 @@
 							<li data-stt="3">
 								<?php $the_query = new WP_Query('page_id=3191'); ?>
 								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
-									<a href="<?php echo home_url(); ?>#system">
+									<a href="<?php echo get_page_link() ?>?tab=demo">
 										<span>04.</span><?php the_title(); ?>
 									</a>
 									<ul class="header-top__menu-sub">
@@ -172,7 +181,10 @@
 						<ul class="d-inline-flex h-100 align-items-center">
 							<li data-stt="0"><a href="<?php echo home_url(); ?>" title="Trang chủ"><span>01.</span>Trang chủ</a></li>
 							<li data-stt="1">
-								<a class="popup-youtube" href="<?php echo home_url(); ?>#app"><span>02.</span>Giải pháp</a>
+								<?php $the_query = new WP_Query('page_id=3195'); ?>
+								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+									<a class="popup-youtube" href="<?php the_field('url_video') ?>"><span>02.</span>Giải pháp</a>
+								<?php endwhile; ?>
 								<ul class="header-top__menu-sub">
 									<li>
 										<?php $the_query = new WP_Query('page_id=3195'); ?>
@@ -186,7 +198,12 @@
 											<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
 										<?php endwhile; ?>
 									</li>
-
+									<li>
+										<?php $the_query = new WP_Query('page_id=3251'); ?>
+										<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
+											<a href="<?php echo get_page_link() ?>"><?php the_title(); ?></a>
+										<?php endwhile; ?>
+									</li>
 								</ul>
 							</li>
 							<li data-stt="2">
@@ -200,7 +217,7 @@
 							<li data-stt="3">
 								<?php $the_query = new WP_Query('page_id=3191'); ?>
 								<?php while ($the_query->have_posts()) : $the_query->the_post();  ?>
-									<a href="<?php echo home_url(); ?>#system">
+									<a href="<?php echo get_page_link() ?>?tab=demo">
 										<span>04.</span><?php the_title(); ?>
 									</a>
 									<ul class="header-top__menu-sub">

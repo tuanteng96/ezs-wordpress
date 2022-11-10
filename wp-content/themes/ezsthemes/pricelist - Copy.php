@@ -29,7 +29,7 @@ get_header();
                         <div class="card-price bg-primary-2">
                             <div class="price-t">Tổng chi phí</div>
                             <div class="price-s1 d-flex justify-content-center align-items-start">
-                                <span class="price-s1-p font-number total-price-first">81.600.000</span>
+                                <span class="price-s1-p font-number total-price-first">22.800.000</span>
                             </div>
                             <div class="price-d">Năm đầu tiên</div>
                         </div>
@@ -38,7 +38,7 @@ get_header();
                         <div class="card-price">
                             <div class="price-t">Tổng chi phí</div>
                             <div class="price-s1 d-flex justify-content-center align-items-start">
-                                <span class="price-s1-p total-price">6.000.000</span>
+                                <span class="price-s1-p total-price">3.300.000</span>
                             </div>
                             <div class="price-d">Năm tiếp theo</div>
                         </div>
@@ -56,9 +56,10 @@ get_header();
                         </div>
                         <div class="price-head-item w-year">
                             <div class="price-note"><code>Năm đầu</code></div>
-                            <div class="price-s font-number" data-price-frist="75000000">
-                                75.000.000
+                            <div class="price-s font-number" data-price-frist="19500000">
+                                19.500.000
                             </div>
+                            <div class="price-d">30.000.000</div>
                         </div>
                         <div class="price-head-item w-year">
                             <div class="price-note"><code>Năm tiếp theo</code></div>
@@ -105,21 +106,23 @@ get_header();
                         </div>
                         <div class="price-head-item w-year">
                             <div class="price-note"><code>Năm đầu</code></div>
-                            <div class="price-s font-number" data-price-frist="300000">
-                                300.000
+                            <div class="price-s font-number" data-price-frist="0">
+                                Miễn phí
                             </div>
+                            <div class="price-d">200.000</div>
                         </div>
                         <div class="price-head-item w-year">
                             <div class="price-note"><code>Năm tiếp theo</code></div>
-                            <div class="price-s" data-price="300000">
-                                300.000
+                            <div class="price-s">
+                                Miễn phí
                             </div>
+                            <div class="price-d" data-price="0">200.000</div>
                         </div>
                     </div>
                     <div class="price-body-item">
                         <div class="price-head-item w-flex">
                             <div class="price-content-title">
-                                Phí tài khoản AppStore, CH Play - <span class="text-danger font-number">125$ / 1 năm</span>
+                                Phí tài khoản Appstore - <span class="text-danger font-number">99$ / 1 năm</span>
                             </div>
                             <div class="price-content-desc">
                                 <h3>Miễn phí duy trì app trên tài khoản chung của công ty EZS</h3>
@@ -127,15 +130,17 @@ get_header();
                         </div>
                         <div class="price-head-item w-year">
                             <div class="price-note"><code>Năm đầu</code></div>
-                            <div class="price-s font-number" data-price-frist="3000000">
-                                3.000.000
+                            <div class="price-s font-number" data-price-frist="0">
+                                Miễn phí
                             </div>
+                            <div class="price-d">2.400.000</div>
                         </div>
                         <div class="price-head-item w-year">
                             <div class="price-note"><code>Năm tiếp theo</code></div>
-                            <div class="price-s" data-price="2400000">
-                                2.400.000
+                            <div class="price-s">
+                                Miễn phí
                             </div>
+                            <div class="price-d" data-price-frist="0">2.400.000</div>
                         </div>
                     </div>
                     <div class="price-body-item">
@@ -162,9 +167,9 @@ get_header();
                                 3.000.000
                             </div>
                         </div>
-                        <div class="price-head-item w-year">
+                        <div class="price-head-item w-year cs">
                             <div class="price-note"><code>Năm tiếp theo</code></div>
-                            <div class="price-s cs" data-price="3000000">
+                            <div class="price-s" data-price="3000000">
                                 3.000.000
                             </div>
                         </div>
